@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg">
+
+    <!-- Soft dark-green overlay for contrast -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.2"
+        android:background="#0D2B14" />
+
+    <!-- Scrollable Dashboard -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="12dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="16dp">
+
+            <!-- ==================== WELCOME CARD ==================== -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/login_card_bg"
+                android:elevation="12dp"
+                android:outlineAmbientShadowColor="#1B5E20"
+                android:outlineSpotShadowColor="#1B5E20"
+                android:gravity="center_vertical"
+                android:maxWidth="600dp"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="14dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="14dp">
+
+                <!-- Profile -->
+                <ImageView
+                    android:id="@+id/btnProfile"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:clickable="true"
+                    android:contentDescription="MSP Profile"
+                    android:focusable="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_profile"
+                    android:tint="#1B5E20" />
+
+                <!-- Welcome Text -->
+                <TextView
+                    android:id="@+id/txtWelcomeMSP"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="start|center_vertical"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:text="MSP User Name"
+                    android:textColor="#1B5E20"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Logout -->
+                <ImageView
+                    android:id="@+id/btnLogout"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:clickable="true"
+                    android:contentDescription="Logout"
+                    android:focusable="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_logout"
+                    android:tint="#D32F2F" />
+
+            </LinearLayout>
+
+
+            <!-- ==================== MAIN DASHBOARD CARD ==================== -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/login_card_bg"
+                android:elevation="12dp"
+                android:outlineAmbientShadowColor="#1B5E20"
+                android:outlineSpotShadowColor="#1B5E20"
+                android:gravity="center_horizontal"
+                android:maxWidth="600dp"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingTop="22dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="22dp">
+
+                <!-- Dashboard Heading -->
+                <TextView
+                    android:id="@+id/txtDashboardHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/subtitle_chip_bg"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:letterSpacing="0.02"
+                    android:paddingStart="14dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="6dp"
+                    android:shadowColor="#33000000"
+                    android:shadowDx="1"
+                    android:shadowDy="2"
+                    android:shadowRadius="3"
+                    android:text="MSP's Dashboard"
+                    android:textColor="#1B5E20"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="22dp"
+                    android:background="#66BB6A" />
+
+
+                <!-- ==================== ROW 1 ==================== -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <!-- View Profile -->
+                    <LinearLayout
+                        android:id="@+id/btnViewProfile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/login_button_bg"
+                        android:clickable="true"
+                        android:elevation="8dp"
+                        android:outlineAmbientShadowColor="#1B5E20"
+                        android:outlineSpotShadowColor="#1B5E20"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:minHeight="135dp"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/imgViewProfile"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="View Profile"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_farmer_profile" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:letterSpacing="0.02"
+                            android:maxLines="2"
+                            android:text="View Profile"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                    <!-- Monitor Details -->
+                    <LinearLayout
+                        android:id="@+id/btnMonitorDetails"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/login_button_bg"
+                        android:clickable="true"
+                        android:elevation="8dp"
+                        android:outlineAmbientShadowColor="#1B5E20"
+                        android:outlineSpotShadowColor="#1B5E20"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:minHeight="135dp"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/imgMonitorDetails"
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="Monitor Details"
+                            android:padding="5dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_monitor_details" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:letterSpacing="0.02"
+                            android:maxLines="2"
+                            android:text="Monitor Details"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!-- Row Spacing -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp" />
+
+
+                <!-- ==================== ROW 2 ==================== -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <!-- Current Slot Book -->
+                    <LinearLayout
+                        android:id="@+id/btnCurrentSlotBook"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/login_button_bg"
+                        android:clickable="true"
+                        android:elevation="8dp"
+                        android:outlineAmbientShadowColor="#1B5E20"
+                        android:outlineSpotShadowColor="#1B5E20"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:minHeight="135dp"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/imgCurrentSlotBook"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="Book Current Slot"
+                            android:padding="5dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_book_slot" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:letterSpacing="0.02"
+                            android:maxLines="2"
+                            android:text="Book Current Slot"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Reports -->
+                    <LinearLayout
+                        android:id="@+id/btnMSPReport"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/login_button_bg"
+                        android:clickable="true"
+                        android:elevation="8dp"
+                        android:outlineAmbientShadowColor="#1B5E20"
+                        android:outlineSpotShadowColor="#1B5E20"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:minHeight="135dp"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/imgMSPReport"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="Reports"
+                            android:padding="5dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_report" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:letterSpacing="0.02"
+                            android:maxLines="2"
+                            android:text="Reports"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

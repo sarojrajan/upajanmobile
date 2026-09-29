@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginBottom="14dp"
+    android:background="@drawable/prefilled_section_bg"
+    android:elevation="4dp"
+    android:outlineAmbientShadowColor="#1B5E20"
+    android:outlineSpotShadowColor="#1B5E20"
+    android:maxWidth="600dp"
+    android:orientation="vertical"
+    android:paddingStart="16dp"
+    android:paddingTop="16dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="16dp">
+
+    <!-- Vehicle Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:minHeight="44dp">
+
+        <TextView
+            android:id="@+id/txtVehicleNumberHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/subtitle_chip_bg"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:paddingStart="14dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="6dp"
+            android:text="Vehicle Detail 1"
+            android:textColor="#1B5E20"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Delete -->
+        <ImageButton
+            android:id="@+id/btnDeleteVehicle"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Delete vehicle"
+            android:padding="8dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:tint="#D32F2F" />
+
+    </RelativeLayout>
+
+    <!-- Vehicle Type -->
+    <TextView
+        style="@style/FarmerFormLabel"
+        android:text="Vehicle Type" />
+
+    <FrameLayout
+        style="@style/FarmerDropdownContainer">
+
+        <Spinner
+            android:id="@+id/spVehicleType"
+            style="@style/FarmerDropdownSpinner" />
+
+        <ImageView
+            android:id="@+id/imgVehicleTypeArrow"
+            style="@style/FarmerDropdownArrow" />
+
+    </FrameLayout>
+
+    <!-- Vehicle Number -->
+    <TextView
+        style="@style/FarmerFormLabel"
+        android:layout_marginTop="10dp"
+        android:text="Vehicle Number" />
+
+    <EditText
+        android:id="@+id/edtVehicleNumber"
+        style="@style/FarmerEditableField"
+        android:hint="Enter vehicle number"
+        android:inputType="textCapCharacters"
+        android:maxLength="50" />
+
+    <!-- Driver Name -->
+    <TextView
+        style="@style/FarmerFormLabel"
+        android:layout_marginTop="10dp"
+        android:text="Driver Name" />
+
+    <EditText
+        android:id="@+id/edtDriverName"
+        style="@style/FarmerEditableField"
+        android:hint="Enter driver name"
+        android:inputType="textCapWords"
+        android:maxLength="100" />
+
+    <!-- Driver Phone -->
+    <TextView
+        style="@style/FarmerFormLabel"
+        android:layout_marginTop="10dp"
+        android:text="Driver Phone No." />
+
+    <EditText
+        android:id="@+id/edtDriverPhone"
+        style="@style/FarmerEditableField"
+        android:hint="Enter driver phone number"
+        android:inputType="phone"
+        android:maxLength="10" />
+
+    <!-- Gunny Bag Year -->
+    <TextView
+        style="@style/FarmerFormLabel"
+        android:layout_marginTop="10dp"
+        android:text="Gunny Bag Year" />
+
+    <FrameLayout
+        style="@style/FarmerDropdownContainer">
+
+        <Spinner
+            android:id="@+id/spGunnyBagYear"
+            style="@style/FarmerDropdownSpinner" />
+
+        <ImageView
+            android:id="@+id/imgGunnyBagYearArrow"
+            style="@style/FarmerDropdownArrow" />
+
+    </FrameLayout>
+
+    <!-- Gunny Bag Type -->
+    <TextView
+        style="@style/FarmerFormLabel"
+        android:layout_marginTop="10dp"
+        android:text="Gunny Bag Type" />
+
+    <FrameLayout
+        style="@style/FarmerDropdownContainer">
+
+        <Spinner
+            android:id="@+id/spGunnyBagType"
+            style="@style/FarmerDropdownSpinner" />
+
+        <ImageView
+            android:id="@+id/imgGunnyBagTypeArrow"
+            style="@style/FarmerDropdownArrow" />
+
+    </FrameLayout>
+
+    <!-- Net Weight -->
+    <TextView
+        style="@style/FarmerFormLabel"
+        android:layout_marginTop="10dp"
+        android:text="Net weight" />
+
+    <EditText
+        android:id="@+id/edtNetWeight"
+        style="@style/FarmerEditableField"
+        android:hint="Enter net weight"
+        android:inputType="numberDecimal"
+        android:maxLength="20" />
+
+    <!-- Total Bags -->
+    <TextView
+        style="@style/FarmerFormLabel"
+        android:layout_marginTop="10dp"
+        android:text="Total Bags" />
+
+    <EditText
+        android:id="@+id/edtTotalBags"
+        style="@style/FarmerEditableField"
+        android:hint="Enter total bags"
+        android:inputType="number"
+        android:maxLength="10" />
+
+</LinearLayout>

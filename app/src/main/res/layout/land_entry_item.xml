@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/landEntryRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/login_card_bg"
+    android:elevation="12dp"
+    android:maxWidth="600dp"
+    android:orientation="vertical"
+    android:outlineAmbientShadowColor="#1B5E20"
+    android:outlineSpotShadowColor="#1B5E20"
+    android:paddingStart="18dp"
+    android:paddingTop="22dp"
+    android:paddingEnd="18dp"
+    android:paddingBottom="22dp">
+
+    <!-- Header & Remove Button -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/tvLandDetailNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:minHeight="48dp"
+                android:background="@drawable/subtitle_chip_bg"
+                android:gravity="center"
+                android:paddingStart="48dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="48dp"
+                android:paddingBottom="6dp"
+                android:text="Land Detail 1"
+                android:textColor="#1B5E20"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-black"
+                android:letterSpacing="0.02"
+                android:shadowColor="#33000000"
+                android:shadowDx="1"
+                android:shadowDy="2"
+                android:shadowRadius="3" />
+
+        <ImageButton
+            android:id="@+id/btnRemoveLandEntry"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_gravity="end|center_vertical"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Remove land detail"
+            android:padding="9dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:tint="#B22222" />
+
+    </FrameLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="22dp"
+        android:background="#66BB6A" />
+
+    <!-- Circle -->
+    <TextView
+        style="@style/FarmerFormLabel"
+        android:text="Circle" />
+
+    <FrameLayout style="@style/FarmerDropdownContainer">
+
+        <Spinner
+            android:id="@+id/spCircle"
+            style="@style/FarmerDropdownSpinner"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+        <ImageView
+            android:id="@+id/imgCircleDropdown"
+            style="@style/FarmerDropdownArrow"
+            android:clickable="true"
+            android:contentDescription="Open circle dropdown"
+            android:focusable="true" />
+
+    </FrameLayout>
+
+    <!-- Halka -->
+    <TextView
+        style="@style/FarmerFormLabel"
+        android:text="Halka" />
+
+    <FrameLayout style="@style/FarmerDropdownContainer">
+
+        <Spinner
+            android:id="@+id/spHalka"
+            style="@style/FarmerDropdownSpinner"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+        <ImageView
+            android:id="@+id/imgHalkaDropdown"
+            style="@style/FarmerDropdownArrow"
+            android:clickable="true"
+            android:contentDescription="Open Halka dropdown"
+            android:focusable="true" />
+
+    </FrameLayout>
+
+    <!-- Mauja -->
+    <TextView
+        style="@style/FarmerFormLabel"
+        android:text="Mauja" />
+
+    <FrameLayout style="@style/FarmerDropdownContainer">
+
+        <Spinner
+            android:id="@+id/spMauja"
+            style="@style/FarmerDropdownSpinner"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+        <ImageView
+            android:id="@+id/imgMaujaDropdown"
+            style="@style/FarmerDropdownArrow"
+            android:clickable="true"
+            android:contentDescription="Open Mauja dropdown"
+            android:focusable="true" />
+
+    </FrameLayout>
+
+    <!-- Crop -->
+    <TextView
+        style="@style/FarmerFormLabel"
+        android:text="Crop" />
+
+    <FrameLayout style="@style/FarmerDropdownContainer">
+
+        <Spinner
+            android:id="@+id/spCrop"
+            style="@style/FarmerDropdownSpinner"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+        <ImageView
+            android:id="@+id/imgCropDropdown"
+            style="@style/FarmerDropdownArrow"
+            android:clickable="true"
+            android:contentDescription="Open crop dropdown"
+            android:focusable="true" />
+
+    </FrameLayout>
+
+    <!-- Volume number -->
+    <TextView
+        style="@style/FarmerFormLabel"
+        android:text="Volume No in REG II" />
+
+    <EditText
+        android:id="@+id/edtVolumeNo"
+        style="@style/FarmerEditableField"
+        android:hint="Enter Volume No"
+        android:inputType="text"
+        android:maxLength="100" />
+
+    <!-- Page number -->
+    <TextView
+        style="@style/FarmerFormLabel"
+        android:text="Page No in REG II" />
+
+    <EditText
+        android:id="@+id/edtPageNo"
+        style="@style/FarmerEditableField"
+        android:hint="Enter Page No"
+        android:inputType="text"
+        android:maxLength="100" />
+
+    <!-- Plot number -->
+    <TextView
+        style="@style/FarmerFormLabel"
+        android:text="Plot No" />
+
+    <EditText
+        android:id="@+id/edtPlotNo"
+        style="@style/FarmerEditableField"
+        android:hint="Enter Plot No"
+        android:inputType="text"
+        android:maxLength="100" />
+
+    <!-- Khata number -->
+    <TextView
+        style="@style/FarmerFormLabel"
+        android:text="Khata No" />
+
+    <EditText
+        android:id="@+id/edtKhataNo"
+        style="@style/FarmerEditableField"
+        android:hint="Enter Khata No"
+        android:inputType="text"
+        android:maxLength="100" />
+
+    <!-- Rakba -->
+    <TextView
+        style="@style/FarmerFormLabel"
+        android:text="Rakba (in Acre)" />
+
+    <EditText
+        android:id="@+id/edtRakba"
+        style="@style/FarmerEditableField"
+        android:digits="0123456789."
+        android:hint="Enter Rakba in Acre"
+        android:inputType="numberDecimal"
+        android:maxLength="12" />
+
+    <TextView
+        style="@style/FarmerFormSectionTitle"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
+        android:text="Land in which crop sowed"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <!-- Irrigated -->
+    <TextView
+        style="@style/FarmerFormLabel"
+        android:text="Irrigated (in Acre)" />
+
+    <EditText
+        android:id="@+id/edtIrrigated"
+        style="@style/FarmerEditableField"
+        android:digits="0123456789."
+        android:hint="Must be less than or equal to Rakba"
+        android:inputType="numberDecimal"
+        android:maxLength="12" />
+
+    <!-- Unirrigated -->
+    <TextView
+        style="@style/FarmerFormLabel"
+        android:text="Unirrigated (in Acre)" />
+
+    <EditText
+        android:id="@+id/edtUnirrigated"
+        style="@style/FarmerEditableField"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:hint="Autofill: Rakba - Irrigated"
+        android:inputType="none"
+        android:textIsSelectable="false" />
+
+    <TextView
+        style="@style/FarmerFormSectionTitle"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="6dp"
+        android:gravity="center"
+        android:text="Only 16 Quintals per Acre are allowed"
+        android:textColor="#B22222"
+        android:textSize="16sp" />
+
+    <TextView
+        style="@style/FarmerFormSectionTitle"
+        android:layout_marginBottom="8dp"
+        android:text="Total Expected Crop (In Quintals)"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <!-- Irrigated crop quantity -->
+    <TextView
+        style="@style/FarmerFormLabel"
+        android:text="Irrigated Crop (Quintals)" />
+
+    <EditText
+        android:id="@+id/edtExpectedIrrigated"
+        style="@style/FarmerEditableField"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:hint="Autofill: 16 × Irrigated"
+        android:inputType="none"
+        android:textIsSelectable="false" />
+
+    <!-- Unirrigated crop quantity -->
+    <TextView
+        style="@style/FarmerFormLabel"
+        android:text="Unirrigated Crop (Quintals)" />
+
+    <EditText
+        android:id="@+id/edtExpectedUnirrigated"
+        style="@style/FarmerEditableField"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:hint="Autofill: 16 × Unirrigated"
+        android:inputType="none"
+        android:textIsSelectable="false" />
+
+</LinearLayout>

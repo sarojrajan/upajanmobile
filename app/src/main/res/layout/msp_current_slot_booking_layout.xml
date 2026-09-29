@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg">
+
+    <!-- Dark green overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.2"
+        android:background="#0D2B14" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingStart="12dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="16dp">
+
+            <!-- Main Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/login_card_bg"
+                android:elevation="12dp"
+                android:maxWidth="600dp"
+                android:orientation="vertical"
+                android:outlineAmbientShadowColor="#1B5E20"
+                android:outlineSpotShadowColor="#1B5E20"
+                android:paddingStart="18dp"
+                android:paddingTop="22dp"
+                android:paddingEnd="18dp"
+                android:paddingBottom="22dp">
+
+                <!-- Main Heading -->
+                <TextView
+                    android:id="@+id/txtCurrentSlotBookingHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:letterSpacing="0.02"
+                    android:shadowColor="#33000000"
+                    android:shadowDx="1"
+                    android:shadowDy="2"
+                    android:shadowRadius="3"
+                    android:text="Current Slot Booking"
+                    android:textColor="#1B5E20"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <!-- Decorative Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="22dp"
+                    android:background="#66BB6A" />
+
+                <!-- Farmer ID Search Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/login_card_bg"
+                    android:elevation="6dp"
+                    android:orientation="vertical"
+                    android:outlineAmbientShadowColor="#1B5E20"
+                    android:outlineSpotShadowColor="#1B5E20"
+                    android:paddingStart="14dp"
+                    android:paddingTop="16dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        style="@style/FarmerFormLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="Please Enter Farmer ID" />
+
+                    <EditText
+                        android:id="@+id/edtFarmerId"
+                        style="@style/FarmerEditableField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Farmer ID"
+                        android:inputType="number"
+                        android:maxLength="20"
+                        android:singleLine="true" />
+
+                    <Button
+                        android:id="@+id/btnSearchFarmer"
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/button_bg"
+                        android:elevation="6dp"
+                        android:minHeight="0dp"
+                        android:text="Search"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- Search Progress -->
+                <ProgressBar
+                    android:id="@+id/progressSearchFarmer"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:visibility="gone" />
+
+
+                <!-- Farmer Details Section -->
+                <LinearLayout
+                    android:id="@+id/llFarmerDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/login_card_bg"
+                    android:elevation="8dp"
+                    android:orientation="vertical"
+                    android:outlineAmbientShadowColor="#1B5E20"
+                    android:outlineSpotShadowColor="#1B5E20"
+                    android:padding="16dp"
+                    android:visibility="gone">
+
+                    <!-- Header -->
+                    <TextView
+                        android:id="@+id/txtFarmerDetailsHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:text="Farmer Details"
+                        android:textColor="#1B5E20"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/subtitle_chip_bg"
+                        android:gravity="center"
+                        android:paddingStart="14dp"
+                        android:paddingTop="6dp"
+                        android:paddingEnd="14dp"
+                        android:paddingBottom="6dp"
+                        android:text="Procurement and farmer information"
+                        android:textColor="#78907D"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="#66BB6A" />
+
+                    <!-- QUANTITY SUMMARY -->
+                    <TextView
+                        style="@style/DetailSectionTitle"
+                        android:layout_marginTop="0dp"
+                        android:text="QUANTITY SUMMARY" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- Procured -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="6dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_stat_card"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingStart="6dp"
+                            android:paddingTop="14dp"
+                            android:paddingEnd="6dp"
+                            android:paddingBottom="14dp">
+
+                            <TextView
+                                android:id="@+id/txtProcuredQuantity"
+                                style="@style/StatValue"
+                                android:text="0" />
+
+                            <TextView
+                                style="@style/StatLabel"
+                                android:text="Procured" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Qtl"
+                                android:textColor="#8A9A8D"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <!-- Submitted -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginEnd="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_stat_card"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingStart="6dp"
+                            android:paddingTop="14dp"
+                            android:paddingEnd="6dp"
+                            android:paddingBottom="14dp">
+
+                            <TextView
+                                android:id="@+id/txtSubmittedQuantity"
+                                style="@style/StatValue"
+                                android:text="0" />
+
+                            <TextView
+                                style="@style/StatLabel"
+                                android:text="Submitted" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Qtl"
+                                android:textColor="#8A9A8D"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <!-- Available -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_stat_card_highlight"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingStart="6dp"
+                            android:paddingTop="14dp"
+                            android:paddingEnd="6dp"
+                            android:paddingBottom="14dp">
+
+                            <TextView
+                                android:id="@+id/txtAvailableQuantity"
+                                style="@style/StatValue"
+                                android:text="0" />
+
+                            <TextView
+                                style="@style/StatLabel"
+                                android:text="Available"
+                                android:textColor="#2E7D32"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Qtl"
+                                android:textColor="#2E7D32"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- FARMER INFORMATION -->
+                    <TextView
+                        style="@style/DetailSectionTitle"
+                        android:text="FARMER INFORMATION" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_section_group"
+                        android:orientation="vertical"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp">
+
+                        <LinearLayout style="@style/DetailRow">
+                            <TextView style="@style/DetailLabel" android:text="Farmer ID" />
+                            <TextView android:id="@+id/txtFarmerId" style="@style/DetailValue" />
+                        </LinearLayout>
+
+                        <View style="@style/DetailDivider" />
+
+                        <LinearLayout style="@style/DetailRow">
+                            <TextView style="@style/DetailLabel" android:text="Farmer Name" />
+                            <TextView android:id="@+id/txtFarmerName" style="@style/DetailValue" />
+                        </LinearLayout>
+
+                        <View style="@style/DetailDivider" />
+
+                        <LinearLayout style="@style/DetailRow">
+                            <TextView style="@style/DetailLabel" android:text="Father / Husband" />
+                            <TextView android:id="@+id/txtFatherHusbandName" style="@style/DetailValue" />
+                        </LinearLayout>
+
+                        <View style="@style/DetailDivider" />
+
+                        <LinearLayout style="@style/DetailRow">
+                            <TextView style="@style/DetailLabel" android:text="Mobile No." />
+                            <TextView android:id="@+id/txtMobileNo" style="@style/DetailValue" />
+                        </LinearLayout>
+
+                        <View style="@style/DetailDivider" />
+
+                        <LinearLayout style="@style/DetailRow">
+                            <TextView style="@style/DetailLabel" android:text="Bank Account" />
+                            <TextView android:id="@+id/txtBankAccountNo" style="@style/DetailValue" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- LOCATION -->
+                    <TextView
+                        style="@style/DetailSectionTitle"
+                        android:text="LOCATION" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_section_group"
+                        android:orientation="vertical"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp">
+
+                        <LinearLayout style="@style/DetailRow">
+                            <TextView style="@style/DetailLabel" android:text="District" />
+                            <TextView android:id="@+id/txtDistrict" style="@style/DetailValue" />
+                        </LinearLayout>
+
+                        <View style="@style/DetailDivider" />
+
+                        <LinearLayout style="@style/DetailRow">
+                            <TextView style="@style/DetailLabel" android:text="Block" />
+                            <TextView android:id="@+id/txtBlock" style="@style/DetailValue" />
+                        </LinearLayout>
+
+                        <View style="@style/DetailDivider" />
+
+                        <LinearLayout style="@style/DetailRow">
+                            <TextView style="@style/DetailLabel" android:text="Panchayat" />
+                            <TextView android:id="@+id/txtPanchayat" style="@style/DetailValue" />
+                        </LinearLayout>
+
+                        <View style="@style/DetailDivider" />
+
+                        <LinearLayout style="@style/DetailRow">
+                            <TextView style="@style/DetailLabel" android:text="Village" />
+                            <TextView android:id="@+id/txtVillage" style="@style/DetailValue" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- MSP CENTRE -->
+                    <TextView
+                        style="@style/DetailSectionTitle"
+                        android:text="MSP CENTRE" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_section_group"
+                        android:orientation="vertical"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp">
+
+                        <LinearLayout style="@style/DetailRow">
+                            <TextView style="@style/DetailLabel" android:text="Centre ID" />
+                            <TextView android:id="@+id/txtMspCentreId" style="@style/DetailValue" />
+                        </LinearLayout>
+
+                        <View style="@style/DetailDivider" />
+
+                        <LinearLayout style="@style/DetailRow">
+                            <TextView style="@style/DetailLabel" android:text="Centre Name" />
+                            <TextView android:id="@+id/txtMspCentreName" style="@style/DetailValue" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- QUANTITY TO BE RECEIVED -->
+                    <TextView
+                        style="@style/DetailSectionTitle"
+                        android:layout_marginTop="24dp"
+                        android:text="QUANTITY TO BE RECEIVED" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="Enter quantity in quintal"
+                        android:textColor="#607568"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/edtQuantityToBeReceived"
+                        style="@style/FarmerEditableField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter quantity"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true" />
+
+                    <!-- Maximum Available Quantity -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_hint_box"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="14dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="14dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Maximum Available Quantity"
+                            android:textColor="#8E3030"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtAvailableHint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0 quintal"
+                            android:textColor="#D32F2F"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Send SMS -->
+                    <Button
+                        android:id="@+id/btnSendCurrentSMS"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/button_bg"
+                        android:elevation="5dp"
+                        android:minHeight="0dp"
+                        android:text="Send SMS"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- Send SMS Progress -->
+                <ProgressBar
+                    android:id="@+id/progressSendCurrentSMS"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,30 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Scaled group to give canvas room for the shadow -->
+    <group
+        android:pivotX="12"
+        android:pivotY="12"
+        android:scaleX="0.85"
+        android:scaleY="0.85">
+
+        <!-- Drop Shadow Layer (Darker & Offset) -->
+        <!-- Shifted by 1 unit on a 24x24 canvas -->
+        <group
+            android:translateX="1"
+            android:translateY="1">
+            <path
+                android:fillColor="#66000000"
+                android:pathData="M17,7l-1.41,1.41L18.17,11H8v2h10.17l-2.58,2.59L17,17l5,-5zM4,5h8V3H4c-1.1,0-2,0.9-2,2v14c0,1.1,0.9,2,2,2h8v-2H4V5z" />
+        </group>
+
+        <!-- Main Foreground Layer -->
+        <path
+            android:fillColor="@android:color/white"
+            android:pathData="M17,7l-1.41,1.41L18.17,11H8v2h10.17l-2.58,2.59L17,17l5,-5zM4,5h8V3H4c-1.1,0-2,0.9-2,2v14c0,1.1,0.9,2,2,2h8v-2H4V5z" />
+    </group>
+
+</vector>

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg">
+
+    <!-- Soft dark-green overlay for contrast -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.2"
+        android:background="#0D2B14" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingStart="12dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="16dp">
+
+            <!-- Main Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="4dp"
+                android:background="@drawable/login_card_bg"
+                android:elevation="16dp"
+                android:outlineAmbientShadowColor="#1B5E20"
+                android:outlineSpotShadowColor="#1B5E20"
+                android:maxWidth="600dp"
+                android:orientation="vertical"
+                android:paddingStart="22dp"
+                android:paddingTop="28dp"
+                android:paddingEnd="22dp"
+                android:paddingBottom="30dp">
+
+                <!-- Heading -->
+                <TextView
+                    android:id="@+id/txtAdvanceCMRHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/subtitle_chip_bg"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:letterSpacing="0.02"
+                    android:paddingStart="14dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="6dp"
+                    android:shadowColor="#33000000"
+                    android:shadowDx="1"
+                    android:shadowDy="2"
+                    android:shadowRadius="3"
+                    android:text="Advance CMR"
+                    android:textColor="#1B5E20"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="3dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="#66BB6A" />
+
+                <!-- CMR Basic Details -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="22dp"
+                    android:background="@drawable/prefilled_section_bg"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <!-- District -->
+                    <TextView
+                        style="@style/FarmerFormLabel"
+                        android:text="District" />
+
+                    <FrameLayout
+                        style="@style/FarmerDropdownContainer">
+
+                        <Spinner
+                            android:id="@+id/spDistrict"
+                            style="@style/FarmerDropdownSpinner" />
+
+                        <ImageView
+                            android:id="@+id/imgDistrictArrow"
+                            style="@style/FarmerDropdownArrow" />
+
+                    </FrameLayout>
+
+                    <!-- Agency -->
+                    <TextView
+                        style="@style/FarmerFormLabel"
+                        android:layout_marginTop="10dp"
+                        android:text="Agency" />
+
+                    <EditText
+                        android:id="@+id/edtAgency"
+                        style="@style/FarmerEditableField"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:text="JSFC"
+                        android:textColor="@android:color/black" />
+
+                    <!-- JSFC Godown -->
+                    <TextView
+                        style="@style/FarmerFormLabel"
+                        android:layout_marginTop="10dp"
+                        android:text="JSFC Godown" />
+
+                    <FrameLayout
+                        style="@style/FarmerDropdownContainer">
+
+                        <Spinner
+                            android:id="@+id/spJSFCGodown"
+                            style="@style/FarmerDropdownSpinner" />
+
+                        <ImageView
+                            android:id="@+id/imgJSFCGodownArrow"
+                            style="@style/FarmerDropdownArrow" />
+
+                    </FrameLayout>
+
+                    <!-- Bank Guarantee CMR -->
+                    <TextView
+                        style="@style/FarmerFormLabel"
+                        android:layout_marginTop="10dp"
+                        android:text="Bank Guarantee CMR" />
+
+                    <FrameLayout
+                        style="@style/FarmerDropdownContainer">
+
+                        <Spinner
+                            android:id="@+id/spBankGuaranteeCMR"
+                            style="@style/FarmerDropdownSpinner" />
+
+                        <ImageView
+                            android:id="@+id/imgBankGuaranteeCMRArrow"
+                            style="@style/FarmerDropdownArrow" />
+
+                    </FrameLayout>
+
+                    <!-- CMR to be Submitted -->
+                    <TextView
+                        style="@style/FarmerFormLabel"
+                        android:layout_marginTop="10dp"
+                        android:text="CMR to be Submitted" />
+
+                    <EditText
+                        android:id="@+id/edtCMRSubmitted"
+                        style="@style/FarmerEditableField"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:text="290 Qntls."
+                        android:textColor="@android:color/black" />
+
+                    <!-- No. Of Lots -->
+                    <TextView
+                        style="@style/FarmerFormLabel"
+                        android:layout_marginTop="10dp"
+                        android:text="No. Of Lots" />
+
+                    <EditText
+                        android:id="@+id/edtNoOfLots"
+                        style="@style/FarmerEditableField"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:text="1"
+                        android:textColor="@android:color/black" />
+
+                    <!-- Date -->
+                    <TextView
+                        style="@style/FarmerFormLabel"
+                        android:layout_marginTop="10dp"
+                        android:text="Date of Submit" />
+
+                    <EditText
+                        android:id="@+id/edtDateOfSubmit"
+                        style="@style/FarmerEditableField"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:hint="Select date"
+                        android:inputType="none"
+                        android:drawableEnd="@drawable/ic_calendar"
+                        android:drawableTint="#1B5E20"
+                        android:drawablePadding="12dp"
+                        android:paddingEnd="16dp" />
+
+                    <!-- Commodity Type -->
+                    <TextView
+                        style="@style/FarmerFormLabel"
+                        android:layout_marginTop="10dp"
+                        android:text="Commodity Type" />
+
+                    <FrameLayout
+                        style="@style/FarmerDropdownContainer">
+
+                        <Spinner
+                            android:id="@+id/spCommodityType"
+                            style="@style/FarmerDropdownSpinner" />
+
+                        <ImageView
+                            android:id="@+id/imgCommodityTypeArrow"
+                            style="@style/FarmerDropdownArrow" />
+
+                    </FrameLayout>
+
+                    <!-- Stenciling Code -->
+                    <TextView
+                        style="@style/FarmerFormLabel"
+                        android:layout_marginTop="10dp"
+                        android:text="Stenciling Code" />
+
+                    <EditText
+                        android:id="@+id/edtStencilingCode"
+                        style="@style/FarmerEditableField"
+                        android:hint="Enter stenciling code"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="100" />
+
+                </LinearLayout>
+
+                <!-- Vehicle Details Heading -->
+                <TextView
+                    android:id="@+id/txtVehicleDetailsHeading"
+                    style="@style/FarmerFormSectionTitle"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:text="Vehicle Details" />
+
+                <!-- Dynamic Vehicle Container -->
+                <LinearLayout
+                    android:id="@+id/llDynamicVehicleContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <!-- Add Vehicle -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="22dp"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnAddVehicle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="52dp"
+                        android:background="@drawable/button_bg"
+                        android:drawableStart="@android:drawable/ic_input_add"
+                        android:drawablePadding="10dp"
+                        android:drawableTint="@android:color/white"
+                        android:elevation="4dp"
+                        android:letterSpacing="0.02"
+                        android:minHeight="0dp"
+                        android:outlineAmbientShadowColor="#1B5E20"
+                        android:outlineSpotShadowColor="#1B5E20"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:text="Add Vehicle"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- Save -->
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_bg"
+                    android:elevation="8dp"
+                    android:letterSpacing="0.03"
+                    android:minHeight="0dp"
+                    android:outlineAmbientShadowColor="#1B5E20"
+                    android:outlineSpotShadowColor="#1B5E20"
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <!-- Progress -->
+                <ProgressBar
+                    android:id="@+id/progressSave"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

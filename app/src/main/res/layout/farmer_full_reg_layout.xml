@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg">
+
+    <!-- Soft dark-green overlay for contrast -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.2"
+        android:background="#0D2B14" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingStart="12dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="4dp"
+                android:background="@drawable/login_card_bg"
+                android:elevation="16dp"
+                android:outlineAmbientShadowColor="#1B5E20"
+                android:outlineSpotShadowColor="#1B5E20"
+                android:maxWidth="600dp"
+                android:orientation="vertical"
+                android:paddingStart="22dp"
+                android:paddingTop="28dp"
+                android:paddingEnd="22dp"
+                android:paddingBottom="30dp">
+
+                <!-- Main heading -->
+                <TextView
+                    android:id="@+id/txtBasicDetailsHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:letterSpacing="0.02"
+                    android:shadowColor="#33000000"
+                    android:shadowDx="1"
+                    android:shadowDy="2"
+                    android:shadowRadius="3"
+                    android:text="Fill Basic Details"
+                    android:textColor="#1B5E20"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <!-- Decorative divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#66BB6A" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="22dp"
+                    android:background="@drawable/subtitle_chip_bg"
+                    android:gravity="center"
+                    android:paddingStart="14dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="6dp"
+                    android:text="Complete your personal and bank information"
+                    android:textColor="#4C8C52"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <!-- ================= PREFILLED SECTION ================= -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:background="@drawable/prefilled_section_bg"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="14dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginEnd="10dp"
+                            android:contentDescription="@null"
+                            android:src="@android:drawable/ic_menu_info_details"
+                            android:tint="#2E7D32" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Registered Information"
+                                android:textColor="#1B5E20"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="These details were received during login and cannot be edited"
+                                android:textColor="#5A7A61"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Farmer Name -->
+                    <TextView
+                        style="@style/FarmerFormLabel"
+                        android:text="Farmer Name" />
+
+                    <EditText
+                        android:id="@+id/edtFarmerName"
+                        style="@style/FarmerPrefilledField"
+                        android:hint="Farmer name"
+                        android:inputType="textPersonName" />
+
+                    <!-- Aadhaar Number -->
+                    <TextView
+                        style="@style/FarmerFormLabel"
+                        android:text="Aadhaar Number" />
+
+                    <EditText
+                        android:id="@+id/edtAadhaarNumber"
+                        style="@style/FarmerPrefilledField"
+                        android:hint="Aadhaar number"
+                        android:inputType="none" />
+
+                    <!-- Mobile Number -->
+                    <TextView
+                        style="@style/FarmerFormLabel"
+                        android:text="Mobile Number" />
+
+                    <EditText
+                        android:id="@+id/edtMobileNumber"
+                        style="@style/FarmerPrefilledField"
+                        android:hint="Mobile number"
+                        android:inputType="none" />
+
+                    <!-- District -->
+                    <TextView
+                        style="@style/FarmerFormLabel"
+                        android:text="District" />
+
+                    <EditText
+                        android:id="@+id/edtDistrict"
+                        style="@style/FarmerPrefilledFieldLast"
+                        android:hint="District"
+                        android:inputType="none" />
+
+                </LinearLayout>
+
+                <!-- ================= PERSONAL DETAILS ================= -->
+
+                <TextView
+                    style="@style/FarmerFormSectionTitle"
+                    android:text="Fill details from here" />
+
+                <!-- Father / Husband Name -->
+                <TextView
+                    style="@style/FarmerFormLabel"
+                    android:text="Father / Husband Name" />
+
+                <EditText
+                    android:id="@+id/edtFatherHusbandName"
+                    style="@style/FarmerEditableField"
+                    android:hint="Enter father or husband name"
+                    android:inputType="textPersonName"
+                    android:maxLength="100" />
+
+                <!-- Block -->
+                <TextView
+                    style="@style/FarmerFormLabel"
+                    android:text="Block" />
+
+                <FrameLayout
+                    style="@style/FarmerDropdownContainer">
+
+                    <Spinner
+                        android:id="@+id/spBlock"
+                        style="@style/FarmerDropdownSpinner" />
+
+                    <ImageView
+                        android:id="@+id/imgBlockArrow"
+                        style="@style/FarmerDropdownArrow" />
+
+                </FrameLayout>
+
+                <!-- Panchayat -->
+                <TextView
+                    style="@style/FarmerFormLabel"
+                    android:text="Panchayat" />
+
+                <FrameLayout
+                    style="@style/FarmerDropdownContainer">
+
+                    <Spinner
+                        android:id="@+id/spPanchayat"
+                        style="@style/FarmerDropdownSpinner"
+                        android:enabled="false" />
+
+                    <ImageView
+                        android:id="@+id/imgPanchayatArrow"
+                        style="@style/FarmerDropdownArrow"
+                        android:alpha="0.4" />
+
+                </FrameLayout>
+
+                <!-- Village -->
+                <TextView
+                    style="@style/FarmerFormLabel"
+                    android:text="Village" />
+
+                <FrameLayout
+                    style="@style/FarmerDropdownContainer">
+
+                    <Spinner
+                        android:id="@+id/spVillage"
+                        style="@style/FarmerDropdownSpinner"
+                        android:enabled="false" />
+
+                    <ImageView
+                        android:id="@+id/imgVillageArrow"
+                        style="@style/FarmerDropdownArrow"
+                        android:alpha="0.4" />
+
+                </FrameLayout>
+
+                <!-- Category -->
+                <TextView
+                    style="@style/FarmerFormLabel"
+                    android:text="Category" />
+
+                <FrameLayout
+                    style="@style/FarmerDropdownContainer">
+
+                    <Spinner
+                        android:id="@+id/spCategory"
+                        style="@style/FarmerDropdownSpinner" />
+
+                    <ImageView
+                        android:id="@+id/imgCategoryArrow"
+                        style="@style/FarmerDropdownArrow" />
+
+                </FrameLayout>
+
+                <!-- ================= BANK DETAILS ================= -->
+
+                <TextView
+                    style="@style/FarmerFormSectionTitle"
+                    android:layout_marginTop="8dp"
+                    android:text="Bank Details" />
+
+                <!-- Bank -->
+                <TextView
+                    style="@style/FarmerFormLabel"
+                    android:text="Bank" />
+
+                <FrameLayout
+                    style="@style/FarmerDropdownContainer">
+
+                    <Spinner
+                        android:id="@+id/spBank"
+                        style="@style/FarmerDropdownSpinner"
+                        android:enabled="true" />
+
+                    <ImageView
+                        android:id="@+id/imgBankArrow"
+                        style="@style/FarmerDropdownArrow"
+                        android:alpha="0.4" />
+
+                </FrameLayout>
+
+                <!-- Branch -->
+                <TextView
+                    style="@style/FarmerFormLabel"
+                    android:text="Branch" />
+
+                <FrameLayout
+                    style="@style/FarmerDropdownContainer">
+
+                    <Spinner
+                        android:id="@+id/spBranch"
+                        style="@style/FarmerDropdownSpinner"
+                        android:enabled="false" />
+
+                    <ImageView
+                        android:id="@+id/imgBranchArrow"
+                        style="@style/FarmerDropdownArrow"
+                        android:alpha="0.4" />
+
+                </FrameLayout>
+
+                <!-- IFSC -->
+                <TextView
+                    style="@style/FarmerFormLabel"
+                    android:text="IFSC Code" />
+
+                <EditText
+                    android:id="@+id/edtIFSC"
+                    style="@style/FarmerEditableField"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="IFSC will be filled automatically"
+                    android:inputType="none"
+                    android:longClickable="false"
+                    android:textIsSelectable="true" />
+
+                <!-- Account Number -->
+                <TextView
+                    style="@style/FarmerFormLabel"
+                    android:text="Account Number" />
+
+                <EditText
+                    android:id="@+id/edtAccountNumber"
+                    style="@style/FarmerEditableField"
+                    android:hint="Enter bank account number"
+                    android:inputType="number"
+                    android:maxLength="20" />
+
+                <!-- ================= REVENUE DETAILS ================= -->
+
+                <TextView
+                    style="@style/FarmerFormSectionTitle"
+                    android:layout_marginTop="8dp"
+                    android:text="Revenue Details" />
+
+                <!-- Circle -->
+                <TextView
+                    style="@style/FarmerFormLabel"
+                    android:text="Circle" />
+
+                <FrameLayout
+                    style="@style/FarmerDropdownContainer">
+
+                    <Spinner
+                        android:id="@+id/spCircle"
+                        style="@style/FarmerDropdownSpinner"
+                        android:enabled="true" />
+
+                    <ImageView
+                        android:id="@+id/imgCircleArrow"
+                        style="@style/FarmerDropdownArrow"
+                        android:alpha="0.4" />
+
+                </FrameLayout>
+
+                <!-- Patwari Halka -->
+                <TextView
+                    style="@style/FarmerFormLabel"
+                    android:text="Patwari Halka Number" />
+
+                <FrameLayout
+                    style="@style/FarmerDropdownContainerLargeMargin">
+
+                    <Spinner
+                        android:id="@+id/spPatwariHalkaNumber"
+                        style="@style/FarmerDropdownSpinner"
+                        android:enabled="false" />
+
+                    <ImageView
+                        android:id="@+id/imgPatwariHalkaArrow"
+                        style="@style/FarmerDropdownArrow"
+                        android:alpha="0.4" />
+
+                </FrameLayout>
+
+                <!-- ================= DOCUMENTS ================= -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:letterSpacing="0.02"
+                    android:text="Upload Documents"
+                    android:textColor="#1B5E20"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Allowed formats: .png, .jpeg, .jpg and .pdf"
+                    android:textColor="#B26A00"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="24dp"
+                    android:gravity="center"
+                    android:text="Maximum document size: 512 KB"
+                    android:textColor="#B26A00"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <!-- Aadhaar Upload -->
+                <TextView
+                    style="@style/FarmerFormLabel"
+                    android:layout_marginTop="5dp"
+                    android:text="Aadhaar Document" />
+
+                <Button
+                    android:id="@+id/btnUploadAadhaar"
+                    style="@style/FarmerUploadButton"
+                    android:drawableStart="@drawable/icon_menu_upload"
+                    android:text="Select Aadhaar Document" />
+
+                <TextView
+                    android:id="@+id/txtSelectedAadhaarFile"
+                    style="@style/FarmerSelectedFileText"
+                    android:layout_marginBottom="30dp"
+                    android:text="No document selected" />
+
+                <!-- Passbook Upload -->
+                <TextView
+                    style="@style/FarmerFormLabel"
+                    android:text="Bank Passbook" />
+
+                <Button
+                    android:id="@+id/btnUploadBankPassbook"
+                    style="@style/FarmerUploadButton"
+                    android:drawableStart="@drawable/icon_menu_upload"
+                    android:text="Select Bank Passbook" />
+
+                <TextView
+                    android:id="@+id/txtSelectedPassbookFile"
+                    style="@style/FarmerSelectedFileText"
+                    android:layout_marginBottom="34dp"
+                    android:text="No document selected" />
+
+                <ProgressBar
+                    android:id="@+id/progressSubmit"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnSubmitBasicDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/button_bg"
+                    android:elevation="8dp"
+                    android:letterSpacing="0.03"
+                    android:minHeight="0dp"
+                    android:outlineAmbientShadowColor="#1B5E20"
+                    android:outlineSpotShadowColor="#1B5E20"
+                    android:text="Submit Basic Details"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

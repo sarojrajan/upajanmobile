@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginBottom="14dp"
+    android:background="@drawable/login_card_bg"
+    android:elevation="8dp"
+    android:maxWidth="600dp"
+    android:orientation="vertical"
+    android:outlineAmbientShadowColor="#1B5E20"
+    android:outlineSpotShadowColor="#1B5E20"
+    android:paddingStart="16dp"
+    android:paddingTop="16dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="18dp">
+
+    <!-- Vehicle header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:minHeight="44dp">
+
+        <TextView
+            android:id="@+id/txtVehicleNumberHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/subtitle_chip_bg"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:letterSpacing="0.01"
+            android:paddingStart="14dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="6dp"
+            android:shadowColor="#33000000"
+            android:shadowDx="1"
+            android:shadowDy="2"
+            android:shadowRadius="3"
+            android:text="Vehicle 1"
+            android:textColor="#1B5E20"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Delete vehicle -->
+        <ImageButton
+            android:id="@+id/btnDeleteVehicle"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Delete vehicle"
+            android:padding="8dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:tint="#1B5E20" />
+
+    </RelativeLayout>
+
+    <!-- Vehicle Number -->
+    <TextView
+        style="@style/FarmerFormLabel"
+        android:text="Vehicle Number" />
+
+    <EditText
+        android:id="@+id/edtVehicleNumber"
+        style="@style/FarmerEditableField"
+        android:hint="Enter vehicle number"
+        android:inputType="textCapCharacters"
+        android:maxLength="50" />
+
+    <!-- Quantity -->
+    <TextView
+        style="@style/FarmerFormLabel"
+        android:layout_marginTop="10dp"
+        android:text="Quantity" />
+
+    <EditText
+        android:id="@+id/edtVehicleQuantity"
+        style="@style/FarmerEditableField"
+        android:hint="Enter quantity"
+        android:inputType="numberDecimal"
+        android:maxLength="20" />
+
+    <!-- Capture Image -->
+    <TextView
+        style="@style/FarmerFormLabel"
+        android:layout_marginTop="10dp"
+        android:text="Vehicle Image" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgVehicle"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginBottom="8dp"
+            android:adjustViewBounds="true"
+            android:background="#22000000"
+            android:contentDescription="Vehicle image"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnCaptureVehicleImage"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/button_bg"
+            android:drawableStart="@drawable/ic_camera"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:minHeight="0dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="Capture Image"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

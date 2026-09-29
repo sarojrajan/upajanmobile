@@ -1,0 +1,13 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp" android:height="24dp"
+    android:viewportWidth="24" android:viewportHeight="24">
+    <!-- Document Background -->
+    <path android:fillColor="#D32F2F"
+        android:pathData="M14,2H6a2,2 0,0 0,-2 2v16a2,2 0,0 0,2 2h12a2,2 0,0 0,2 -2V8Z"/>
+    <!-- Folded Corner -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M14,2v6h6"/>
+    <!-- "PDF" Text -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M7.5,12h2a1.5,1.5 0,0 1,0 3h-1v2H7.5ZM8.5,13.2v0.6h1a0.3,0.3 0,0 0,0 -0.6ZM11.4,12h1.7c1.4,0 2.3,1 2.3,2.5S14.5,17 13.1,17H11.4Zm1.1,1.1v2.8h0.6c0.7,0 1.2,-0.5 1.2,-1.4S13.8,13.1 13.1,13.1ZM17.1,12h2v1.2h-2v0.9h1.8v1.2h-1.8V17H16V12Z"/>
+</vector>

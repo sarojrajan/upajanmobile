@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg">
+
+    <!-- Dark green overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.2"
+        android:background="#0D2B14" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingStart="12dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="16dp">
+
+            <!-- Main card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/login_card_bg"
+                android:elevation="12dp"
+                android:maxWidth="600dp"
+                android:orientation="vertical"
+                android:outlineAmbientShadowColor="#1B5E20"
+                android:outlineSpotShadowColor="#1B5E20"
+                android:paddingStart="18dp"
+                android:paddingTop="22dp"
+                android:paddingEnd="18dp"
+                android:paddingBottom="22dp">
+
+                <!-- Main heading -->
+                <TextView
+                    android:id="@+id/txtLandDetailsHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:letterSpacing="0.02"
+                    android:shadowColor="#33000000"
+                    android:shadowDx="1"
+                    android:shadowDy="2"
+                    android:shadowRadius="3"
+                    android:text="Enter Land Details"
+                    android:textColor="#1B5E20"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <!-- Decorative divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="22dp"
+                    android:background="#66BB6A" />
+
+                <!-- Common land information -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:background="@drawable/login_card_bg"
+                    android:elevation="6dp"
+                    android:orientation="vertical"
+                    android:outlineAmbientShadowColor="#1B5E20"
+                    android:outlineSpotShadowColor="#1B5E20"
+                    android:paddingStart="14dp"
+                    android:paddingTop="16dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="16dp">
+
+                    <!-- Land type -->
+                    <TextView
+                        style="@style/FarmerFormLabel"
+                        android:text="Land Type" />
+
+                    <FrameLayout
+                        style="@style/FarmerDropdownContainer">
+
+                        <Spinner
+                            android:id="@+id/spLandType"
+                            style="@style/FarmerDropdownSpinner"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false" />
+
+                        <ImageView
+                            android:id="@+id/imgLandTypeDropdown"
+                            style="@style/FarmerDropdownArrow"
+                            android:clickable="true"
+                            android:contentDescription="Open land type dropdown"
+                            android:focusable="true" />
+
+                    </FrameLayout>
+
+                    <!-- Subdistrict -->
+                    <TextView
+                        style="@style/FarmerFormLabel"
+                        android:text="Subdistrict" />
+
+                    <FrameLayout
+                        style="@style/FarmerDropdownContainer">
+
+                        <Spinner
+                            android:id="@+id/spSubdistrict"
+                            style="@style/FarmerDropdownSpinner"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false" />
+
+                        <ImageView
+                            android:id="@+id/imgSubdistrictDropdown"
+                            style="@style/FarmerDropdownArrow"
+                            android:clickable="true"
+                            android:contentDescription="Open subdistrict dropdown"
+                            android:focusable="true" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <!-- Dynamic land cards inserted here -->
+                <LinearLayout
+                    android:id="@+id/llDynamicLandContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <!-- Add more land button -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="25dp"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnAddLandEntry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="52dp"
+                        android:background="@drawable/button_bg"
+                        android:drawableStart="@android:drawable/ic_input_add"
+                        android:drawablePadding="10dp"
+                        android:drawableTint="@android:color/white"
+                        android:minHeight="0dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:text="Add More Land"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- Land document card -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_card_bg"
+                    android:elevation="10dp"
+                    android:orientation="vertical"
+                    android:outlineAmbientShadowColor="#1B5E20"
+                    android:outlineSpotShadowColor="#1B5E20"
+                    android:paddingStart="18dp"
+                    android:paddingTop="22dp"
+                    android:paddingEnd="18dp"
+                    android:paddingBottom="22dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:letterSpacing="0.01"
+                        android:shadowColor="#33000000"
+                        android:shadowDx="1"
+                        android:shadowDy="2"
+                        android:shadowRadius="3"
+                        android:text="Upload Land Document"
+                        android:textColor="#1B5E20"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="(Land Receipt / Challan)"
+                        android:textColor="#E67E22"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="24dp"
+                        android:gravity="center"
+                        android:text="Only PDF files smaller than 512 KB are allowed"
+                        android:textColor="#E67E22"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                    <Button
+                        android:id="@+id/btnUploadLandDocument"
+                        style="@style/FarmerUploadButton"
+                        android:drawableStart="@android:drawable/ic_menu_upload"
+                        android:text="Select Document (.pdf)" />
+
+                    <TextView
+                        android:id="@+id/txtSelectedLandDocument"
+                        style="@style/FarmerSelectedFileText"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="No document selected"
+                        android:textStyle="bold"/>
+
+                    <ProgressBar
+                        android:id="@+id/progressSubmit"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="8dp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <!-- Update button -->
+                <Button
+                    android:id="@+id/btnUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_bg"
+                    android:elevation="6dp"
+                    android:minHeight="0dp"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
