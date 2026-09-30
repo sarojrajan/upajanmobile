@@ -142,6 +142,7 @@
                     android:id="@+id/btnMillerLogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
                     android:background="@drawable/login_button_bg"
                     android:clickable="true"
                     android:elevation="8dp"
@@ -162,13 +163,90 @@
                         android:layout_marginEnd="12dp"
                         android:contentDescription="Miller Login Icon"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/ic_miller_login_logo" />
+                        android:src="@drawable/ic_msp_login_logo" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-medium"
                         android:text="Miller Login"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- DSO Login -->
+                <LinearLayout
+                    android:id="@+id/btnDSOLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/login_button_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:minHeight="56dp"
+                    android:orientation="horizontal"
+                    android:outlineAmbientShadowColor="#1B5E20"
+                    android:outlineSpotShadowColor="#1B5E20"
+                    android:paddingStart="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="12dp">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginEnd="12dp"
+                        android:contentDescription="DSO Login Icon"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_msp_login_logo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="DSO Login"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- DMSFC Login -->
+                <LinearLayout
+                    android:id="@+id/btnDMSFCLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_button_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:minHeight="56dp"
+                    android:orientation="horizontal"
+                    android:outlineAmbientShadowColor="#1B5E20"
+                    android:outlineSpotShadowColor="#1B5E20"
+                    android:paddingStart="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="12dp">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginEnd="12dp"
+                        android:contentDescription="DMSFC Login Icon"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_msp_login_logo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="DMSFC Login"
                         android:textColor="@android:color/white"
                         android:textSize="18sp"
                         android:textStyle="bold" />
