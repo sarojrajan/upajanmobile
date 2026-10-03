@@ -1,4 +1,4 @@
-package com.example.farmerapplication.models
+package com.example.farmerapplication.models.miller
 
 // ---------- Districts ----------
 data class MillerDistrictItem(

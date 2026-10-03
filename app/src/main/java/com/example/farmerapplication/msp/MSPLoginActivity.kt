@@ -9,8 +9,8 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 import com.example.farmerapplication.R
 import com.example.farmerapplication.api.RetrofitClient
-import com.example.farmerapplication.models.MSPLoginRequest
-import com.example.farmerapplication.models.MSPLoginResponse
+import com.example.farmerapplication.models.msp.MSPLoginRequest
+import com.example.farmerapplication.models.msp.MSPLoginResponse
 import com.google.gson.Gson
 import retrofit2.Call
 import retrofit2.Callback

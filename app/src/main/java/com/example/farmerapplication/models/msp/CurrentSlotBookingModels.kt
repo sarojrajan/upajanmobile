@@ -1,4 +1,4 @@
-package com.example.farmerapplication.models
+package com.example.farmerapplication.models.msp
 
 import com.google.gson.annotations.SerializedName
 

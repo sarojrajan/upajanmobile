@@ -11,11 +11,11 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 import com.example.farmerapplication.R
 import com.example.farmerapplication.api.RetrofitClient
-import com.example.farmerapplication.models.FarmerDetailsResponse
-import com.example.farmerapplication.models.SendFarmerSmsRequest
-import com.example.farmerapplication.models.SendFarmerSmsResponse
+import com.example.farmerapplication.models.msp.FarmerDetailsResponse
+import com.example.farmerapplication.models.msp.SendFarmerSmsRequest
+import com.example.farmerapplication.models.msp.SendFarmerSmsResponse
 import android.app.AlertDialog
-import com.example.farmerapplication.models.FarmerEligibilityResponse
+import com.example.farmerapplication.models.farmer.FarmerEligibilityResponse
 import com.google.gson.Gson
 import retrofit2.Call
 import retrofit2.Callback

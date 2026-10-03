@@ -16,10 +16,10 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 import com.example.farmerapplication.R
 import com.example.farmerapplication.api.RetrofitClient
-import com.example.farmerapplication.models.GenerateOtpRequest
-import com.example.farmerapplication.models.GenerateOtpResponse
-import com.example.farmerapplication.models.VerifyOtpRequest
-import com.example.farmerapplication.models.VerifyOtpResponse
+import com.example.farmerapplication.models.farmer.GenerateOtpRequest
+import com.example.farmerapplication.models.farmer.GenerateOtpResponse
+import com.example.farmerapplication.models.farmer.VerifyOtpRequest
+import com.example.farmerapplication.models.farmer.VerifyOtpResponse
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
