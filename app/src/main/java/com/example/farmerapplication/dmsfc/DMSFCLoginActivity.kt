@@ -14,12 +14,15 @@ import com.google.gson.Gson
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import android.text.InputType
+import android.widget.ImageButton
 
 class DMSFCLoginActivity : ComponentActivity() {
 
     private lateinit var etUsername: EditText
     private lateinit var etPassword: EditText
     private lateinit var btnLogin: Button
+    private lateinit var btnTogglePassword: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +31,9 @@ class DMSFCLoginActivity : ComponentActivity() {
         etUsername = findViewById(R.id.editTextUsername)
         etPassword = findViewById(R.id.editTextPassword)
         btnLogin = findViewById(R.id.btnLogin)
+        btnTogglePassword = findViewById(R.id.btnTogglePassword)
 
+        btnTogglePassword.setOnClickListener { togglePasswordVisibility() }
         btnLogin.setOnClickListener { attemptLogin() }
     }
 
@@ -108,5 +113,23 @@ class DMSFCLoginActivity : ComponentActivity() {
     private fun resetButton() {
         btnLogin.isEnabled = true
         btnLogin.text = "Login"
+    }
+
+    private fun togglePasswordVisibility() {
+        val cursorPosition = etPassword.selectionStart
+
+        if (etPassword.inputType == (InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD)) {
+            etPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+
+            btnTogglePassword.setImageResource(R.drawable.ic_eye_off)
+            btnTogglePassword.contentDescription = "Hide password"
+        } else {
+            etPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+
+            btnTogglePassword.setImageResource(R.drawable.ic_eye)
+            btnTogglePassword.contentDescription = "Show password"
+        }
+
+        etPassword.setSelection(cursorPosition)
     }
 }

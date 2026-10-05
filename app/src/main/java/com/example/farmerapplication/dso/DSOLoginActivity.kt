@@ -2,8 +2,10 @@ package com.example.farmerapplication.dso
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.InputType
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import com.example.farmerapplication.R
@@ -20,6 +22,7 @@ class DSOLoginActivity : ComponentActivity() {
     private lateinit var etUsername: EditText
     private lateinit var etPassword: EditText
     private lateinit var btnLogin: Button
+    private lateinit var btnTogglePassword: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +31,9 @@ class DSOLoginActivity : ComponentActivity() {
         etUsername = findViewById(R.id.editTextUsername)
         etPassword = findViewById(R.id.editTextPassword)
         btnLogin = findViewById(R.id.btnLogin)
+        btnTogglePassword = findViewById(R.id.btnTogglePassword)
 
+        btnTogglePassword.setOnClickListener { togglePasswordVisibility() }
         btnLogin.setOnClickListener { attemptLogin() }
     }
 
@@ -92,6 +97,23 @@ class DSOLoginActivity : ComponentActivity() {
                 ).show()
             }
         })
+    }
+
+    private fun togglePasswordVisibility() {
+        val cursorPosition = etPassword.selectionStart
+
+        if (etPassword.inputType == (InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD)) {
+            etPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+
+            btnTogglePassword.setImageResource(R.drawable.ic_eye_off)
+            btnTogglePassword.contentDescription = "Hide password"
+        } else {
+            etPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+
+            btnTogglePassword.setImageResource(R.drawable.ic_eye)
+            btnTogglePassword.contentDescription = "Show password"
+        }
+        etPassword.setSelection(cursorPosition)
     }
 
     private fun saveSession(r: DSOLoginResponse) {

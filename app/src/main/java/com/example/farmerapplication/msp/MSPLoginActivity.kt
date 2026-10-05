@@ -2,9 +2,11 @@ package com.example.farmerapplication.msp
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.InputType
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import com.example.farmerapplication.R
@@ -21,6 +23,7 @@ class MSPLoginActivity : ComponentActivity() {
 
     private lateinit var editTextUsername: EditText
     private lateinit var editTextPassword: EditText
+    private lateinit var btnTogglePassword: ImageButton
     private lateinit var btnLogin: Button
 
     private var loginApiCall: Call<MSPLoginResponse>? = null
@@ -41,10 +44,13 @@ class MSPLoginActivity : ComponentActivity() {
     private fun initializeViews() {
         editTextUsername = findViewById(R.id.editTextUsername)
         editTextPassword = findViewById(R.id.editTextPassword)
+        btnTogglePassword = findViewById(R.id.btnTogglePassword)
         btnLogin = findViewById(R.id.btnLogin)
     }
 
     private fun setupClickListeners() {
+        btnTogglePassword.setOnClickListener { togglePasswordVisibility() }
+
         btnLogin.setOnClickListener {
             hideKeyboard()
             if (validateLoginFields()) {
@@ -81,6 +87,23 @@ class MSPLoginActivity : ComponentActivity() {
         }
 
         return true
+    }
+
+    private fun togglePasswordVisibility() {
+        val cursorPosition = editTextPassword.selectionStart
+
+        if (editTextPassword.inputType == (InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD)) {
+            editTextPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+
+            btnTogglePassword.setImageResource(R.drawable.ic_eye_off)
+            btnTogglePassword.contentDescription = "Hide password"
+        } else {
+            editTextPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+
+            btnTogglePassword.setImageResource(R.drawable.ic_eye)
+            btnTogglePassword.contentDescription = "Show password"
+        }
+        editTextPassword.setSelection(cursorPosition)
     }
 
     private fun performMSPLogin() {
