@@ -257,4 +257,9 @@ interface ApiService {
     @Headers("Accept: application/json", "X-Tunnel-Skip-Anti-Phishing-Page: true")
     @POST("api/Auth/DSO-DMSFCLogin")
     fun dsoLogin(@Body request: DSOLoginRequest): Call<DSOLoginResponse>
+
+    /** DMSFC login (same endpoint as DSO, usertype_id = 6). */
+    @Headers("Accept: application/json", "X-Tunnel-Skip-Anti-Phishing-Page: true")
+    @POST("api/Auth/DSO-DMSFCLogin")
+    fun dmsfcLogin(@Body request: DSOLoginRequest): Call<DSOLoginResponse>
 }

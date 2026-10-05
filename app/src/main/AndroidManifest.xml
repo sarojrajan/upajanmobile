@@ -129,6 +129,10 @@
             android:exported="false" />
 
         <activity
+            android:name=".dmsfc.DMSFCDashboardActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".MainDashboardActivity"
             android:exported="true">
 
