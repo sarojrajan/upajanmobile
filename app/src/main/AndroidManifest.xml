@@ -117,6 +117,22 @@
             android:exported="false" />
 
         <activity
+            android:name=".dso.DSOLoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".dmsfc.DMSFCLoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".dso.DSODashboardActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".dmsfc.DMSFCDashboardActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".MainDashboardActivity"
             android:exported="true">
 

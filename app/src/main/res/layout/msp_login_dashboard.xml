@@ -131,25 +131,49 @@
                     android:textColorHint="#757575" />
 
                 <!-- Password -->
-                <EditText
-                    android:id="@+id/editTextPassword"
+                <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="24dp"
-                    android:background="@drawable/edittext_bg"
-                    android:drawableStart="@android:drawable/ic_lock_lock"
-                    android:drawablePadding="12dp"
-                    android:elevation="2dp"
-                    android:gravity="center_vertical"
-                    android:hint="Enter Password"
-                    android:inputType="textPassword"
-                    android:minHeight="54dp"
-                    android:outlineAmbientShadowColor="#A9DBB4"
-                    android:outlineSpotShadowColor="#A9DBB4"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:textColor="#000000"
-                    android:textColorHint="#757575" />
+                    android:layout_marginBottom="24dp">
+
+                    <!-- Password Field -->
+                    <EditText
+                        android:id="@+id/editTextPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:drawableStart="@android:drawable/ic_lock_lock"
+                        android:drawablePadding="12dp"
+                        android:elevation="2dp"
+                        android:gravity="center_vertical"
+                        android:hint="Enter Password"
+                        android:inputType="textPassword"
+                        android:minHeight="54dp"
+                        android:outlineAmbientShadowColor="#A9DBB4"
+                        android:outlineSpotShadowColor="#A9DBB4"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="56dp"
+                        android:textColor="#000000"
+                        android:textColorHint="#757575" />
+
+                    <!-- Eye Button -->
+                    <ImageButton
+                        android:id="@+id/btnTogglePassword"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="3dp"
+                        android:background="@android:color/transparent"
+                        android:clickable="true"
+                        android:contentDescription="Show password"
+                        android:focusable="true"
+                        android:elevation="10dp"
+                        android:padding="11dp"
+                        android:src="@drawable/ic_eye"
+                        android:tint="#1B5E20"
+                        android:translationZ="10dp" />
+
+                </FrameLayout>
 
                 <!-- Login Button -->
                 <Button

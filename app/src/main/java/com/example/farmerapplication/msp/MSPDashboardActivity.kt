@@ -15,8 +15,6 @@ import com.example.farmerapplication.models.MSPLoginResponse
 import com.google.gson.Gson
 
 class MSPDashboardActivity : ComponentActivity() {
-
-    private lateinit var btnProfile: ImageView
     private lateinit var btnLogout: ImageView
     private lateinit var txtWelcomeMSP: TextView
     private lateinit var txtDashboardHeading: TextView
@@ -42,7 +40,6 @@ class MSPDashboardActivity : ComponentActivity() {
     }
 
     private fun initializeViews() {
-        btnProfile = findViewById(R.id.btnProfile)
         btnLogout = findViewById(R.id.btnLogout)
         txtWelcomeMSP = findViewById(R.id.txtWelcomeMSP)
         txtDashboardHeading = findViewById(R.id.txtDashboardHeading)
@@ -76,7 +73,6 @@ class MSPDashboardActivity : ComponentActivity() {
     }
 
     private fun setupClickListeners() {
-        btnProfile.setOnClickListener { openMSPProfile() }
         btnViewProfile.setOnClickListener { openMSPProfile() }
         btnMonitorDetails.setOnClickListener { openMonitorDetails() }
         btnLogout.setOnClickListener { showLogoutConfirmation() }
