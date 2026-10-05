@@ -14,8 +14,8 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 import com.example.farmerapplication.R
 import com.example.farmerapplication.api.RetrofitClient
-import com.example.farmerapplication.models.msp.ScheduledFarmerItem
-import com.example.farmerapplication.models.msp.ScheduledFarmerResponse
+import com.example.farmerapplication.models.ScheduledFarmerItem
+import com.example.farmerapplication.models.ScheduledFarmerResponse
 import com.example.farmerapplication.utils.ReportExportUtils
 import retrofit2.Call
 import retrofit2.Callback

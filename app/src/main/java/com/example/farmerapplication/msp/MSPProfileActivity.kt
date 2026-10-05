@@ -5,7 +5,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import com.example.farmerapplication.R
-import com.example.farmerapplication.models.msp.MSPLoginResponse
+import com.example.farmerapplication.models.MSPLoginResponse
 import com.google.gson.Gson
 
 class MSPProfileActivity : ComponentActivity() {

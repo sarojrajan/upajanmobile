@@ -15,10 +15,10 @@ import androidx.activity.ComponentActivity
 import androidx.activity.OnBackPressedCallback
 import com.example.farmerapplication.R
 import com.example.farmerapplication.api.RetrofitClient
-import com.example.farmerapplication.models.farmer.FarmerSlotBookingRequest
-import com.example.farmerapplication.models.farmer.FarmerSlotBookingResponse
-import com.example.farmerapplication.models.msp.MSPCenterDetailsResponse
-import com.example.farmerapplication.models.farmer.FarmerEligibilityResponse
+import com.example.farmerapplication.models.FarmerSlotBookingRequest
+import com.example.farmerapplication.models.FarmerSlotBookingResponse
+import com.example.farmerapplication.models.MSPCenterDetailsResponse
+import com.example.farmerapplication.models.FarmerEligibilityResponse
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback

@@ -1,4 +1,4 @@
-package com.example.farmerapplication.models.farmer
+package com.example.farmerapplication.models
 
 data class FarmerLandDetailsResponse(
     val statusCode: Int?,

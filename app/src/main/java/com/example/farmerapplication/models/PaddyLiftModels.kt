@@ -1,4 +1,4 @@
-package com.example.farmerapplication.models.msp
+package com.example.farmerapplication.models
 
 data class SavePaddyLiftRecordsRequest(
     val mspCentreId: String,

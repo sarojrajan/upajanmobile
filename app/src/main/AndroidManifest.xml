@@ -125,6 +125,10 @@
             android:exported="false" />
 
         <activity
+            android:name=".dso.DSODashboardActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".MainDashboardActivity"
             android:exported="true">
 

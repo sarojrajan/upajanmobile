@@ -3,51 +3,53 @@ package com.example.farmerapplication.api
 import com.example.farmerapplication.models.AadhaarOtpResponse
 import com.example.farmerapplication.models.AadhaarSendOtpRequest
 import com.example.farmerapplication.models.AadhaarVerifyOtpRequest
-import com.example.farmerapplication.models.farmer.BankDetailsResponse
-import com.example.farmerapplication.models.farmer.BankResponse
-import com.example.farmerapplication.models.farmer.BlockResponse
-import com.example.farmerapplication.models.farmer.CircleResponse
+import com.example.farmerapplication.models.BankDetailsResponse
+import com.example.farmerapplication.models.BankResponse
+import com.example.farmerapplication.models.BlockResponse
+import com.example.farmerapplication.models.CircleResponse
 import com.example.farmerapplication.models.DistrictResponse
-import com.example.farmerapplication.models.farmer.FarmerFullRegistrationRequest
-import com.example.farmerapplication.models.farmer.FarmerFullRegistrationResponse
-import com.example.farmerapplication.models.farmer.FarmerRegistrationRequest
-import com.example.farmerapplication.models.farmer.FarmerRegistrationResponse
-import com.example.farmerapplication.models.farmer.FarmerSlotBookingRequest
-import com.example.farmerapplication.models.farmer.FarmerSlotBookingResponse
-import com.example.farmerapplication.models.farmer.GenerateOtpRequest
-import com.example.farmerapplication.models.farmer.GenerateOtpResponse
-import com.example.farmerapplication.models.farmer.HalkaResponse
-import com.example.farmerapplication.models.msp.MSPLoginRequest
-import com.example.farmerapplication.models.msp.MSPLoginResponse
-import com.example.farmerapplication.models.farmer.MaujaResponse
-import com.example.farmerapplication.models.farmer.PanchayatResponse
-import com.example.farmerapplication.models.farmer.SaveLandRecordsRequest
-import com.example.farmerapplication.models.farmer.SaveLandRecordsResponse
-import com.example.farmerapplication.models.farmer.VerifyOtpRequest
-import com.example.farmerapplication.models.farmer.VerifyOtpResponse
-import com.example.farmerapplication.models.farmer.VillageResponse
-import com.example.farmerapplication.models.farmer.RegistrationAvailabilityResponse
-import com.example.farmerapplication.models.msp.MSPCenterDetailsResponse
-import com.example.farmerapplication.models.farmer.FarmerProfileDetailsResponse
-import com.example.farmerapplication.models.farmer.FarmerLandDetailsResponse
-import com.example.farmerapplication.models.farmer.FarmerEligibilityResponse
-import com.example.farmerapplication.models.msp.SavePaddyLiftRecordsRequest
-import com.example.farmerapplication.models.msp.SavePaddyLiftRecordsResponse
-import com.example.farmerapplication.models.miller.MillerLoginRequest
-import com.example.farmerapplication.models.miller.MillerLoginResponse
-import com.example.farmerapplication.models.msp.ScheduledFarmerResponse
-import com.example.farmerapplication.models.msp.CommodityReceivedResponse
-import com.example.farmerapplication.models.miller.MillerDistrictItem
-import com.example.farmerapplication.models.miller.MillerJsfcGodownItem
-import com.example.farmerapplication.models.miller.CommodityTypeItem
-import com.example.farmerapplication.models.miller.VehicleTypeItem
-import com.example.farmerapplication.models.miller.GunnyBagYearItem
-import com.example.farmerapplication.models.miller.GunnyBagTypeItem
-import com.example.farmerapplication.models.miller.RiceSubmitRequest
-import com.example.farmerapplication.models.miller.RiceSubmitResponse
-import com.example.farmerapplication.models.msp.FarmerDetailsResponse
-import com.example.farmerapplication.models.msp.SendFarmerSmsRequest
-import com.example.farmerapplication.models.msp.SendFarmerSmsResponse
+import com.example.farmerapplication.models.FarmerFullRegistrationRequest
+import com.example.farmerapplication.models.FarmerFullRegistrationResponse
+import com.example.farmerapplication.models.FarmerRegistrationRequest
+import com.example.farmerapplication.models.FarmerRegistrationResponse
+import com.example.farmerapplication.models.FarmerSlotBookingRequest
+import com.example.farmerapplication.models.FarmerSlotBookingResponse
+import com.example.farmerapplication.models.GenerateOtpRequest
+import com.example.farmerapplication.models.GenerateOtpResponse
+import com.example.farmerapplication.models.HalkaResponse
+import com.example.farmerapplication.models.MSPLoginRequest
+import com.example.farmerapplication.models.MSPLoginResponse
+import com.example.farmerapplication.models.MaujaResponse
+import com.example.farmerapplication.models.PanchayatResponse
+import com.example.farmerapplication.models.SaveLandRecordsRequest
+import com.example.farmerapplication.models.SaveLandRecordsResponse
+import com.example.farmerapplication.models.VerifyOtpRequest
+import com.example.farmerapplication.models.VerifyOtpResponse
+import com.example.farmerapplication.models.VillageResponse
+import com.example.farmerapplication.models.RegistrationAvailabilityResponse
+import com.example.farmerapplication.models.MSPCenterDetailsResponse
+import com.example.farmerapplication.models.FarmerProfileDetailsResponse
+import com.example.farmerapplication.models.FarmerLandDetailsResponse
+import com.example.farmerapplication.models.FarmerEligibilityResponse
+import com.example.farmerapplication.models.SavePaddyLiftRecordsRequest
+import com.example.farmerapplication.models.SavePaddyLiftRecordsResponse
+import com.example.farmerapplication.models.MillerLoginRequest
+import com.example.farmerapplication.models.MillerLoginResponse
+import com.example.farmerapplication.models.ScheduledFarmerResponse
+import com.example.farmerapplication.models.CommodityReceivedResponse
+import com.example.farmerapplication.models.MillerDistrictItem
+import com.example.farmerapplication.models.MillerJsfcGodownItem
+import com.example.farmerapplication.models.CommodityTypeItem
+import com.example.farmerapplication.models.VehicleTypeItem
+import com.example.farmerapplication.models.GunnyBagYearItem
+import com.example.farmerapplication.models.GunnyBagTypeItem
+import com.example.farmerapplication.models.RiceSubmitRequest
+import com.example.farmerapplication.models.RiceSubmitResponse
+import com.example.farmerapplication.models.FarmerDetailsResponse
+import com.example.farmerapplication.models.SendFarmerSmsRequest
+import com.example.farmerapplication.models.SendFarmerSmsResponse
+import com.example.farmerapplication.models.DSOLoginRequest
+import com.example.farmerapplication.models.DSOLoginResponse
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -250,4 +252,9 @@ interface ApiService {
     @Headers("Accept: application/json", "Content-Type: application/json", "X-Tunnel-Skip-Anti-Phishing-Page: true")
     @POST("api/MSPCenter/send-farmer-sms")
     fun sendFarmerSms(@Body request: SendFarmerSmsRequest): Call<SendFarmerSmsResponse>
+
+    /** DSO login. */
+    @Headers("Accept: application/json", "X-Tunnel-Skip-Anti-Phishing-Page: true")
+    @POST("api/Auth/DSO-DMSFCLogin")
+    fun dsoLogin(@Body request: DSOLoginRequest): Call<DSOLoginResponse>
 }

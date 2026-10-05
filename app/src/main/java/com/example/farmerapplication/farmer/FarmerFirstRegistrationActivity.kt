@@ -35,9 +35,9 @@ import com.example.farmerapplication.models.AadhaarVerifyOtpRequest
 import com.example.farmerapplication.models.ApiErrorResponse
 import com.example.farmerapplication.models.District
 import com.example.farmerapplication.models.DistrictResponse
-import com.example.farmerapplication.models.farmer.FarmerRegistrationRequest
-import com.example.farmerapplication.models.farmer.FarmerRegistrationResponse
-import com.example.farmerapplication.models.farmer.RegistrationAvailabilityResponse
+import com.example.farmerapplication.models.FarmerRegistrationRequest
+import com.example.farmerapplication.models.FarmerRegistrationResponse
+import com.example.farmerapplication.models.RegistrationAvailabilityResponse
 import com.google.gson.Gson
 import retrofit2.Call
 import retrofit2.Callback

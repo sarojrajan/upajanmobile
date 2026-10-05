@@ -24,9 +24,9 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import com.example.farmerapplication.R
 import com.example.farmerapplication.api.RetrofitClient
-import com.example.farmerapplication.models.msp.SavePaddyLiftRecordsRequest
-import com.example.farmerapplication.models.msp.SavePaddyLiftRecordsResponse
-import com.example.farmerapplication.models.msp.VehicleEntry
+import com.example.farmerapplication.models.SavePaddyLiftRecordsRequest
+import com.example.farmerapplication.models.SavePaddyLiftRecordsResponse
+import com.example.farmerapplication.models.VehicleEntry
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import retrofit2.Call
