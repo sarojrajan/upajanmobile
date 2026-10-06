@@ -13,6 +13,12 @@ import com.example.farmerapplication.MainDashboardActivity
 import com.example.farmerapplication.R
 import com.example.farmerapplication.models.MSPLoginResponse
 import com.google.gson.Gson
+import com.example.farmerapplication.api.RetrofitClient
+import com.example.farmerapplication.models.PaddyCapacityResponse
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import java.util.Locale
 
 class MSPDashboardActivity : ComponentActivity() {
     private lateinit var btnLogout: ImageView
@@ -22,7 +28,13 @@ class MSPDashboardActivity : ComponentActivity() {
     private lateinit var btnMonitorDetails: LinearLayout
     private lateinit var btnCurrentSlotBook: LinearLayout
     private lateinit var btnMSPReport: LinearLayout
+    private lateinit var txtMspCapacity: TextView
+    private lateinit var txtTotalPaddyProcured: TextView
+    private lateinit var txtTotalPaddySentMiller: TextView
+    private lateinit var txtTotalPaddySentWarehouse: TextView
+    private lateinit var txtRemainingPaddy: TextView
 
+    private var paddyCapacityCall: Call<PaddyCapacityResponse>? = null
     private var mspResponse: MSPLoginResponse? = null
 
     companion object {
@@ -35,6 +47,7 @@ class MSPDashboardActivity : ComponentActivity() {
         initializeViews()
         receiveLoginDetails()
         displayMSPDetails()
+        loadPaddyCapacity()
         setupClickListeners()
         setupBackPressHandler()
     }
@@ -47,6 +60,11 @@ class MSPDashboardActivity : ComponentActivity() {
         btnMonitorDetails = findViewById(R.id.btnMonitorDetails)
         btnCurrentSlotBook = findViewById(R.id.btnCurrentSlotBook)
         btnMSPReport = findViewById(R.id.btnMSPReport)
+        txtMspCapacity = findViewById(R.id.txtMspCapacity)
+        txtTotalPaddyProcured = findViewById(R.id.txtTotalPaddyProcured)
+        txtTotalPaddySentMiller = findViewById(R.id.txtTotalPaddySentMiller)
+        txtTotalPaddySentWarehouse = findViewById(R.id.txtTotalPaddySentWarehouse)
+        txtRemainingPaddy = findViewById(R.id.txtRemainingPaddy)
     }
 
     private fun receiveLoginDetails() {
@@ -177,6 +195,70 @@ class MSPDashboardActivity : ComponentActivity() {
                 }
             }
         )
+    }
+
+    //MSP CAPACITY FETCHING
+    private fun loadPaddyCapacity() {
+        val pacsId = mspResponse?.mspCentreId?.toString()?.trim().orEmpty()
+        if (pacsId.isBlank()) {
+            setCapacityTexts("--")
+            return
+        }
+
+        // Loading state
+        setCapacityTexts("Loading...")
+
+        paddyCapacityCall = RetrofitClient.apiService.getPaddyCapacity(pacsId).also { call ->
+            call.enqueue(object : Callback<PaddyCapacityResponse> {
+                override fun onResponse(
+                    call: Call<PaddyCapacityResponse>,
+                    response: Response<PaddyCapacityResponse>
+                ) {
+                    if (isFinishing || isDestroyed) return
+                    val body = response.body()
+                    if (response.isSuccessful && body != null) {
+                        txtMspCapacity.text = formatQntls(body.targetPaddy)
+                        txtTotalPaddyProcured.text = formatQntls(body.totalPaddy)
+                        txtTotalPaddySentMiller.text = formatQntls(body.paddyLiftByMiller)
+                        txtTotalPaddySentWarehouse.text = formatQntls(body.warehousePaddy)
+                        txtRemainingPaddy.text = formatQntls(body.remainingCapacity)
+                    } else {
+                        setCapacityTexts("--")
+                        Toast.makeText(
+                            this@MSPDashboardActivity,
+                            "Unable to load capacity details (${response.code()}).",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+                }
+
+                override fun onFailure(call: Call<PaddyCapacityResponse>, t: Throwable) {
+                    if (call.isCanceled || isFinishing || isDestroyed) return
+                    setCapacityTexts("--")
+                    Toast.makeText(
+                        this@MSPDashboardActivity,
+                        "Network error. Unable to load capacity details.",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+            })
+        }
+    }
+
+    private fun setCapacityTexts(text: String) {
+        txtMspCapacity.text = text
+        txtTotalPaddyProcured.text = text
+        txtTotalPaddySentMiller.text = text
+        txtTotalPaddySentWarehouse.text = text
+        txtRemainingPaddy.text = text
+    }
+
+    private fun formatQntls(value: Double?): String =
+        String.format(Locale.US, "%.2f Qntls", value ?: 0.0)
+
+    override fun onDestroy() {
+        paddyCapacityCall?.cancel()
+        super.onDestroy()
     }
 
     private fun showFeatureComingSoon() {

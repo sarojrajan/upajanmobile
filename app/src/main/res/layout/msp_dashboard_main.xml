@@ -300,7 +300,9 @@
                             android:textColor="#FFFFFF"
                             android:textSize="14sp"
                             android:textStyle="bold" />
+
                     </LinearLayout>
+
 
                     <!-- Reports -->
                     <LinearLayout
@@ -343,6 +345,105 @@
                             android:textColor="#FFFFFF"
                             android:textSize="14sp"
                             android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!-- ==================== MSP CAPACITY DETAILS ==================== -->
+
+                <!-- Spacing after Row 2 -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="20dp"/>
+
+                <!-- MSP Capacity Group -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/bg_section_group"
+                    android:orientation="vertical"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+
+                    <!-- MSP Capacity -->
+                    <LinearLayout style="@style/DetailRow">
+
+                        <TextView
+                            style="@style/DetailLabel"
+                            android:text="MSP Capacity" />
+
+                        <TextView
+                            android:id="@+id/txtMspCapacity"
+                            style="@style/DetailValue"
+                            android:text="0 Qntls" />
+
+                    </LinearLayout>
+
+                    <View style="@style/DetailDivider" />
+
+                    <!-- Total Paddy Procured -->
+                    <LinearLayout style="@style/DetailRow">
+
+                        <TextView
+                            style="@style/DetailLabel"
+                            android:text="Total Paddy Procured" />
+
+                        <TextView
+                            android:id="@+id/txtTotalPaddyProcured"
+                            style="@style/DetailValue"
+                            android:text="0 Qntls" />
+
+                    </LinearLayout>
+
+                    <View style="@style/DetailDivider" />
+
+                    <!-- Total Paddy Sent to Miller -->
+                    <LinearLayout style="@style/DetailRow">
+
+                        <TextView
+                            style="@style/DetailLabel"
+                            android:text="Total Paddy sent to Miller" />
+
+                        <TextView
+                            android:id="@+id/txtTotalPaddySentMiller"
+                            style="@style/DetailValue"
+                            android:text="0 Qntls" />
+
+                    </LinearLayout>
+
+                    <View style="@style/DetailDivider" />
+
+                    <!-- Total Paddy Sent to Warehouse -->
+                    <LinearLayout style="@style/DetailRow">
+
+                        <TextView
+                            style="@style/DetailLabel"
+                            android:text="Total Paddy sent to Warehouse" />
+
+                        <TextView
+                            android:id="@+id/txtTotalPaddySentWarehouse"
+                            style="@style/DetailValue"
+                            android:text="0 Qntls" />
+
+                    </LinearLayout>
+
+                    <View style="@style/DetailDivider" />
+
+                    <!-- Remaining Paddy -->
+                    <LinearLayout style="@style/DetailRow">
+
+                        <TextView
+                            style="@style/DetailLabel"
+                            android:text="Remaining Paddy" />
+
+                        <TextView
+                            android:id="@+id/txtRemainingPaddy"
+                            style="@style/DetailValue"
+                            android:text="0 Qntls" />
 
                     </LinearLayout>
 
