@@ -83,12 +83,12 @@
 
                 <!-- Divider -->
                 <View
+                    style="@style/DetailDivider"
                     android:layout_width="match_parent"
-                    android:layout_height="3dp"
+                    android:layout_height="1.5dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="6dp"
-                    android:layout_marginBottom="15dp"
-                    android:background="#66BB6A" />
+                    android:layout_marginBottom="15dp" />
 
                 <!-- ================= MSP CENTER ID ================= -->
                 <LinearLayout

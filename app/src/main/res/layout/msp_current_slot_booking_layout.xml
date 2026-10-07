@@ -64,12 +64,13 @@
 
                 <!-- Decorative Divider -->
                 <View
+                    style="@style/DetailDivider"
                     android:layout_width="match_parent"
-                    android:layout_height="3dp"
+                    android:layout_height="1.5dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="22dp"
-                    android:background="#66BB6A" />
+        />
 
                 <!-- Farmer ID Search Section -->
                 <LinearLayout
@@ -109,7 +110,7 @@
                         android:layout_height="50dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="8dp"
-                        android:background="@drawable/button_bg"
+                        android:background="@drawable/login_button_bg"
                         android:elevation="6dp"
                         android:minHeight="0dp"
                         android:text="Search"
@@ -464,7 +465,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
                         android:layout_marginTop="20dp"
-                        android:background="@drawable/button_bg"
+                        android:background="@drawable/login_button_bg"
                         android:elevation="5dp"
                         android:minHeight="0dp"
                         android:text="Send SMS"

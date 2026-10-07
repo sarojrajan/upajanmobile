@@ -93,10 +93,11 @@
 
                 <!-- Decorative divider -->
                 <View
-                    android:layout_width="wrap_content"
-                    android:layout_height="3dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="#66BB6A" />
+                    style="@style/DetailDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp" />
 
                 <!-- District Spinner Container -->
                 <FrameLayout
@@ -245,7 +246,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:layout_marginStart="8dp"
-                        android:background="@drawable/button_bg"
+                        android:background="@drawable/login_button_bg"
                         android:elevation="4dp"
                         android:minWidth="78dp"
                         android:minHeight="0dp"
@@ -336,7 +337,7 @@
                         android:id="@+id/btnSubmit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/button_bg"
+                        android:background="@drawable/login_button_bg"
                         android:elevation="8dp"
                         android:enabled="false"
                         android:letterSpacing="0.03"

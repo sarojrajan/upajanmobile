@@ -128,11 +128,12 @@
 
                 <!-- Decorative divider -->
                 <View
-                    android:layout_width="wrap_content"
-                    android:layout_height="3dp"
+                    style="@style/DetailDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_gravity="center"
                     android:layout_marginTop="8dp"
-                    android:layout_marginBottom="22dp"
-                    android:background="#66BB6A" />
+                    android:layout_marginBottom="22dp" />
 
                 <!-- First Row -->
                 <LinearLayout

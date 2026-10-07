@@ -112,7 +112,7 @@
             android:id="@+id/btnCaptureVehicleImage"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:background="@drawable/button_bg"
+            android:background="@drawable/login_button_bg"
             android:drawableStart="@drawable/ic_camera"
             android:drawablePadding="10dp"
             android:gravity="center"

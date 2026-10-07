@@ -70,12 +70,12 @@
 
                 <!-- Divider -->
                 <View
+                    style="@style/DetailDivider"
                     android:layout_width="wrap_content"
-                    android:layout_height="3dp"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_height="1.5dp"
+                    android:layout_gravity="center"
                     android:layout_marginTop="12dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="#66BB6A" />
+                    android:layout_marginBottom="20dp" />
 
                 <!-- CMR Basic Details -->
                 <LinearLayout
@@ -263,7 +263,7 @@
                         android:id="@+id/btnAddVehicle"
                         android:layout_width="wrap_content"
                         android:layout_height="52dp"
-                        android:background="@drawable/button_bg"
+                        android:background="@drawable/login_button_bg"
                         android:drawableStart="@android:drawable/ic_input_add"
                         android:drawablePadding="10dp"
                         android:drawableTint="@android:color/white"
@@ -288,7 +288,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/button_bg"
+                    android:background="@drawable/login_button_bg"
                     android:elevation="8dp"
                     android:letterSpacing="0.03"
                     android:minHeight="0dp"

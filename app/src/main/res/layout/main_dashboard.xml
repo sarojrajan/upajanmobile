@@ -91,7 +91,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="24dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/subtitle_chip_bg"
                     android:fontFamily="sans-serif-medium"
                     android:gravity="center"
@@ -104,6 +104,14 @@
                     android:textColor="#1B5E20"
                     android:textSize="11sp"
                     android:textStyle="bold" />
+
+                <!-- Decorative divider -->
+                <View
+                    style="@style/DetailDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp" />
 
                 <!-- Farmer Login -->
                 <LinearLayout
