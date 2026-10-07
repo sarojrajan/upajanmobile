@@ -50,14 +50,22 @@
                 android:paddingEnd="16dp"
                 android:paddingBottom="16dp">
 
-                <!-- Reports Icon -->
-                <ImageView
-                    android:id="@+id/imgReportsHeader"
-                    android:layout_width="38dp"
-                    android:layout_height="38dp"
-                    android:contentDescription="MSP Reports"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/img_report" />
+                <!-- Reports Icon Badge -->
+                <FrameLayout
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/icon_badge_bg">
+
+                    <ImageView
+                        android:id="@+id/imgReportsHeader"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="MSP Reports"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_report" />
+
+                </FrameLayout>
 
                 <!-- Header Title -->
                 <TextView
@@ -153,21 +161,28 @@
                     android:paddingEnd="12dp"
                     android:paddingBottom="10dp">
 
-                    <!-- Report Icon -->
-                    <ImageView
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
-                        android:layout_marginStart="10dp"
-                        android:contentDescription="Scheduled Farmers"
-                        android:padding="5dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/img_paddy" />
+                    <!-- Report Icon Badge -->
+                    <FrameLayout
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="4dp"
+                        android:background="@drawable/icon_badge_bg">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="Scheduled Farmers"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_paddy" />
+
+                    </FrameLayout>
 
                     <!-- Report Name -->
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
+                        android:layout_marginStart="12dp"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-medium"
                         android:gravity="center_vertical"
@@ -215,21 +230,28 @@
                     android:paddingEnd="12dp"
                     android:paddingBottom="10dp">
 
-                    <!-- Report Icon -->
-                    <ImageView
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
-                        android:layout_marginStart="10dp"
-                        android:contentDescription="Farmers Paddy Given"
-                        android:padding="5dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/img_paddy" />
+                    <!-- Report Icon Badge -->
+                    <FrameLayout
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="4dp"
+                        android:background="@drawable/icon_badge_bg">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="Farmers Paddy Given"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_paddy" />
+
+                    </FrameLayout>
 
                     <!-- Report Name -->
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
+                        android:layout_marginStart="12dp"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-medium"
                         android:gravity="center_vertical"

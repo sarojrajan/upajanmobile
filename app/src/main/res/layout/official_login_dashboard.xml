@@ -118,13 +118,21 @@
                     android:paddingEnd="16dp"
                     android:paddingBottom="12dp">
 
-                    <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:layout_marginEnd="12dp"
-                        android:contentDescription="MSP Center Login Icon"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/ic_msp_login_logo" />
+                    <FrameLayout
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:layout_marginEnd="14dp"
+                        android:background="@drawable/icon_badge_bg">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="MSP Center Login Icon"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_msp_login_logo" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -157,13 +165,21 @@
                     android:paddingEnd="16dp"
                     android:paddingBottom="12dp">
 
-                    <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:layout_marginEnd="12dp"
-                        android:contentDescription="Miller Login Icon"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/ic_msp_login_logo" />
+                    <FrameLayout
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:layout_marginEnd="14dp"
+                        android:background="@drawable/icon_badge_bg">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="Miller Login Icon"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_msp_login_logo" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -196,13 +212,21 @@
                     android:paddingEnd="16dp"
                     android:paddingBottom="12dp">
 
-                    <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:layout_marginEnd="12dp"
-                        android:contentDescription="DSO Login Icon"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/ic_msp_login_logo" />
+                    <FrameLayout
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:layout_marginEnd="14dp"
+                        android:background="@drawable/icon_badge_bg">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="DSO Login Icon"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_msp_login_logo" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -234,13 +258,21 @@
                     android:paddingEnd="16dp"
                     android:paddingBottom="12dp">
 
-                    <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:layout_marginEnd="12dp"
-                        android:contentDescription="DMSFC Login Icon"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/ic_msp_login_logo" />
+                    <FrameLayout
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:layout_marginEnd="14dp"
+                        android:background="@drawable/icon_badge_bg">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="DMSFC Login Icon"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_msp_login_logo" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
