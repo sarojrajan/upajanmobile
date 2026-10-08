@@ -3,24 +3,24 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"
-    android:layout_marginBottom="14dp"
+    android:layout_marginBottom="10dp"
     android:background="@drawable/login_card_bg"
-    android:elevation="8dp"
+    android:elevation="6dp"
     android:maxWidth="600dp"
     android:orientation="vertical"
     android:outlineAmbientShadowColor="#1B5E20"
     android:outlineSpotShadowColor="#1B5E20"
-    android:paddingStart="16dp"
-    android:paddingTop="16dp"
-    android:paddingEnd="16dp"
-    android:paddingBottom="18dp">
+    android:paddingStart="14dp"
+    android:paddingTop="14dp"
+    android:paddingEnd="14dp"
+    android:paddingBottom="14dp">
 
-    <!-- Vehicle header -->
+    <!-- Vehicle Header -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:minHeight="44dp">
+        android:layout_marginBottom="8dp"
+        android:minHeight="42dp">
 
         <TextView
             android:id="@+id/txtVehicleNumberHeading"
@@ -29,23 +29,23 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:background="@drawable/subtitle_chip_bg"
-            android:fontFamily="sans-serif-black"
+            android:fontFamily="sans-serif-medium"
             android:gravity="center"
             android:letterSpacing="0.01"
-            android:paddingStart="14dp"
-            android:paddingTop="6dp"
-            android:paddingEnd="14dp"
-            android:paddingBottom="6dp"
-            android:shadowColor="#33000000"
+            android:paddingStart="12dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="5dp"
+            android:shadowColor="#22000000"
             android:shadowDx="1"
-            android:shadowDy="2"
-            android:shadowRadius="3"
+            android:shadowDy="1"
+            android:shadowRadius="2"
             android:text="Vehicle 1"
             android:textColor="#1B5E20"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:textStyle="bold" />
 
-        <!-- Delete vehicle -->
+        <!-- Delete Vehicle -->
         <ImageButton
             android:id="@+id/btnDeleteVehicle"
             android:layout_width="44dp"
@@ -54,11 +54,12 @@
             android:layout_centerVertical="true"
             android:background="?android:attr/selectableItemBackgroundBorderless"
             android:contentDescription="Delete vehicle"
-            android:padding="8dp"
+            android:padding="10dp"
             android:src="@android:drawable/ic_menu_close_clear_cancel"
             android:tint="#1B5E20" />
 
     </RelativeLayout>
+
 
     <!-- Vehicle Number -->
     <TextView
@@ -72,10 +73,11 @@
         android:inputType="textCapCharacters"
         android:maxLength="50" />
 
+
     <!-- Quantity -->
     <TextView
         style="@style/FarmerFormLabel"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:text="Quantity" />
 
     <EditText
@@ -85,10 +87,11 @@
         android:inputType="numberDecimal"
         android:maxLength="20" />
 
-    <!-- Capture Image -->
+
+    <!-- Vehicle Image -->
     <TextView
         style="@style/FarmerFormLabel"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:text="Vehicle Image" />
 
     <LinearLayout
@@ -100,8 +103,8 @@
         <ImageView
             android:id="@+id/imgVehicle"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:layout_marginBottom="8dp"
+            android:layout_height="160dp"
+            android:layout_marginBottom="7dp"
             android:adjustViewBounds="true"
             android:background="#22000000"
             android:contentDescription="Vehicle image"
@@ -111,18 +114,19 @@
         <Button
             android:id="@+id/btnCaptureVehicleImage"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="52dp"
             android:background="@drawable/login_button_bg"
             android:drawableStart="@drawable/ic_camera"
-            android:drawablePadding="10dp"
+            android:drawablePadding="8dp"
+            android:fontFamily="sans-serif-medium"
             android:gravity="center"
             android:minHeight="0dp"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
             android:text="Capture Image"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
-            android:textSize="14sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
     </LinearLayout>

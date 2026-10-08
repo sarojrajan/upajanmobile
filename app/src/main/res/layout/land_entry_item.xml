@@ -4,17 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"
-    android:layout_marginBottom="16dp"
+    android:layout_marginBottom="12dp"
     android:background="@drawable/login_card_bg"
-    android:elevation="12dp"
+    android:elevation="8dp"
     android:maxWidth="600dp"
     android:orientation="vertical"
     android:outlineAmbientShadowColor="#1B5E20"
     android:outlineSpotShadowColor="#1B5E20"
-    android:paddingStart="18dp"
-    android:paddingTop="22dp"
-    android:paddingEnd="18dp"
-    android:paddingBottom="22dp">
+    android:paddingStart="16dp"
+    android:paddingTop="20dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="20dp">
 
     <!-- Header & Remove Button -->
     <FrameLayout
@@ -22,37 +22,40 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp">
 
-            <TextView
-                android:id="@+id/tvLandDetailNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:minHeight="48dp"
-                android:background="@drawable/subtitle_chip_bg"
-                android:gravity="center"
-                android:paddingStart="48dp"
-                android:paddingTop="6dp"
-                android:paddingEnd="48dp"
-                android:paddingBottom="6dp"
-                android:text="Land Detail 1"
-                android:textColor="#1B5E20"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:fontFamily="sans-serif-black"
-                android:letterSpacing="0.02"
-                android:shadowColor="#33000000"
-                android:shadowDx="1"
-                android:shadowDy="2"
-                android:shadowRadius="3" />
+        <!-- Title (Subheading: 18sp, Roboto Medium) -->
+        <TextView
+            android:id="@+id/tvLandDetailNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/subtitle_chip_bg"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:letterSpacing="0"
+            android:minHeight="48dp"
+            android:paddingStart="48dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="48dp"
+            android:paddingBottom="6dp"
+            android:shadowColor="#26000000"
+            android:shadowDx="0"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:text="Land Detail 1"
+            android:textColor="#1B5E20"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
+        <!-- Remove (48dp touch target, 24dp icon) -->
         <ImageButton
             android:id="@+id/btnRemoveLandEntry"
-            android:layout_width="42dp"
-            android:layout_height="42dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_gravity="end|center_vertical"
             android:background="?android:attr/selectableItemBackgroundBorderless"
             android:contentDescription="Remove land detail"
-            android:padding="9dp"
+            android:padding="12dp"
+            android:scaleType="fitCenter"
             android:src="@android:drawable/ic_menu_close_clear_cancel"
             android:tint="#B22222" />
 
@@ -62,10 +65,10 @@
     <View
         style="@style/DetailDivider"
         android:layout_width="match_parent"
-        android:layout_height="1.5dp"
+        android:layout_height="1dp"
         android:layout_gravity="center"
         android:layout_marginTop="4dp"
-        android:layout_marginBottom="22dp" />
+        android:layout_marginBottom="20dp" />
 
     <!-- Circle -->
     <TextView
@@ -220,13 +223,14 @@
         android:inputType="numberDecimal"
         android:maxLength="12" />
 
+    <!-- Section title: 16sp -->
     <TextView
         style="@style/FarmerFormSectionTitle"
         android:layout_marginTop="12dp"
         android:layout_marginBottom="8dp"
         android:text="Land in which crop sowed"
         android:textColor="@android:color/white"
-        android:textSize="18sp" />
+        android:textSize="16sp" />
 
     <!-- Irrigated -->
     <TextView
@@ -256,6 +260,7 @@
         android:inputType="none"
         android:textIsSelectable="false" />
 
+    <!-- Notice: 14sp -->
     <TextView
         style="@style/FarmerFormSectionTitle"
         android:layout_marginTop="12dp"
@@ -263,14 +268,15 @@
         android:gravity="center"
         android:text="Only 16 Quintals per Acre are allowed"
         android:textColor="#B22222"
-        android:textSize="16sp" />
+        android:textSize="14sp" />
 
+    <!-- Section title: 16sp -->
     <TextView
         style="@style/FarmerFormSectionTitle"
         android:layout_marginBottom="8dp"
         android:text="Total Expected Crop (In Quintals)"
         android:textColor="@android:color/white"
-        android:textSize="18sp" />
+        android:textSize="16sp" />
 
     <!-- Irrigated crop quantity -->
     <TextView

@@ -23,9 +23,9 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:paddingStart="12dp"
+            android:paddingStart="10dp"
             android:paddingTop="16dp"
-            android:paddingEnd="12dp"
+            android:paddingEnd="10dp"
             android:paddingBottom="16dp">
 
             <!-- ================= FARMER PROFILE CARD ================= -->
@@ -33,221 +33,225 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginHorizontal="4dp"
+                android:layout_marginHorizontal="2dp"
                 android:background="@drawable/login_card_bg"
                 android:elevation="12dp"
                 android:outlineAmbientShadowColor="#1B5E20"
                 android:outlineSpotShadowColor="#1B5E20"
                 android:maxWidth="600dp"
                 android:orientation="vertical"
-                android:paddingStart="18dp"
-                android:paddingTop="22dp"
-                android:paddingEnd="18dp"
-                android:paddingBottom="22dp">
+                android:paddingStart="16dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="20dp">
 
+                <!-- Heading (Headline: 22sp, Roboto Medium) -->
                 <TextView
                     android:id="@+id/txtProfileHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-black"
+                    android:fontFamily="sans-serif-medium"
                     android:gravity="center"
-                    android:letterSpacing="0.02"
-                    android:shadowColor="#33000000"
-                    android:shadowDx="1"
-                    android:shadowDy="2"
-                    android:shadowRadius="3"
+                    android:letterSpacing="0"
+                    android:shadowColor="#26000000"
+                    android:shadowDx="0"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
                     android:text="Farmer Profile"
                     android:textColor="#1B5E20"
-                    android:textSize="24sp"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
 
                 <!-- Decorative Divider -->
                 <View
                     style="@style/DetailDivider"
                     android:layout_width="match_parent"
-                    android:layout_height="1.5dp"
+                    android:layout_height="1dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="14dp" />
 
-                <!-- Subtitle chip -->
+                <!-- Subtitle chip (Label: 12sp, Roboto Medium) -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="24dp"
+                    android:layout_marginBottom="20dp"
                     android:background="@drawable/subtitle_chip_bg"
                     android:fontFamily="sans-serif-medium"
                     android:gravity="center"
-                    android:letterSpacing="0.08"
-                    android:paddingStart="14dp"
+                    android:letterSpacing="0.03"
+                    android:paddingStart="12dp"
                     android:paddingTop="6dp"
-                    android:paddingEnd="14dp"
+                    android:paddingEnd="12dp"
                     android:paddingBottom="6dp"
                     android:text="Registered farmer information"
                     android:textColor="#1B5E20"
-                    android:textSize="11sp"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <!-- Farmer Name -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
+                    <!-- Field label: 12sp, Roboto Medium -->
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="Farmer Name"
                         android:textColor="#1B5E20"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
+                    <!-- Field value: 16sp -->
                     <TextView
                         android:id="@+id/txtFarmerName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="sans-serif-medium"
                         android:lineSpacingExtra="2dp"
                         android:text="--"
                         android:textColor="@android:color/black"
                         android:textIsSelectable="true"
-                        android:textSize="18sp" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
                 <!-- Farmer ID -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="Farmer ID"
                         android:textColor="#1B5E20"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtFarmerId"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:lineSpacingExtra="2dp"
                         android:text="--"
                         android:textColor="@android:color/black"
                         android:textIsSelectable="true"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
                 <!-- District -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="District Name"
                         android:textColor="#1B5E20"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtDistrict"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:lineSpacingExtra="2dp"
                         android:text="--"
                         android:textColor="@android:color/black"
                         android:textIsSelectable="true"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
                 <!-- MSP Centre -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="MSP Centre Name"
                         android:textColor="#1B5E20"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtMspCentre"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:lineSpacingExtra="3dp"
                         android:text="--"
                         android:textColor="@android:color/black"
                         android:textIsSelectable="true"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
                 <!-- Mobile Number -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="Mobile Number"
                         android:textColor="#1B5E20"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtMobile"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:fontFamily="sans-serif-medium"
-                        android:letterSpacing="0.04"
+                        android:letterSpacing="0.03"
                         android:text="--"
                         android:textColor="@android:color/black"
                         android:textIsSelectable="true"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
                 <!-- Aadhaar Number -->
@@ -256,30 +260,30 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/edittext_bg"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="Aadhaar Number"
                         android:textColor="#1B5E20"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtAadhar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:fontFamily="sans-serif-medium"
-                        android:letterSpacing="0.04"
+                        android:letterSpacing="0.03"
                         android:text="--"
                         android:textColor="@android:color/black"
                         android:textIsSelectable="true"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -289,7 +293,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginHorizontal="4dp"
+                android:layout_marginHorizontal="2dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/login_card_bg"
                 android:elevation="12dp"
@@ -297,282 +301,283 @@
                 android:outlineSpotShadowColor="#1B5E20"
                 android:maxWidth="600dp"
                 android:orientation="vertical"
-                android:paddingStart="18dp"
-                android:paddingTop="22dp"
-                android:paddingEnd="18dp"
-                android:paddingBottom="22dp">
+                android:paddingStart="16dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="20dp">
 
+                <!-- Heading (Headline: 22sp, Roboto Medium) -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-black"
+                    android:fontFamily="sans-serif-medium"
                     android:gravity="center"
-                    android:letterSpacing="0.02"
-                    android:shadowColor="#33000000"
-                    android:shadowDx="1"
-                    android:shadowDy="2"
-                    android:shadowRadius="3"
+                    android:letterSpacing="0"
+                    android:shadowColor="#26000000"
+                    android:shadowDx="0"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
                     android:text="Basic Details"
                     android:textColor="#1B5E20"
-                    android:textSize="23sp"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
 
                 <!-- Decorative Divider -->
                 <View
+                    style="@style/DetailDivider"
                     android:layout_width="wrap_content"
-                    android:layout_height="3dp"
+                    android:layout_height="1dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="8dp"
-                    android:layout_marginBottom="22dp"
-                    android:background="#66BB6A" />
+                    android:layout_marginBottom="20dp" />
 
                 <!-- Father / Husband Name -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="Father/Husband Name"
                         android:textColor="#1B5E20"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtFatherHusbandName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:text="--"
                         android:textColor="@android:color/black"
                         android:textIsSelectable="true"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
                 <!-- Subdistrict -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="Subdistrict"
                         android:textColor="#1B5E20"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtSubdistrict"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:text="--"
                         android:textColor="@android:color/black"
                         android:textIsSelectable="true"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
                 <!-- Panchayat -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="Panchayat"
                         android:textColor="#1B5E20"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtPanchayat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:text="--"
                         android:textColor="@android:color/black"
                         android:textIsSelectable="true"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
                 <!-- Village -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="Village"
                         android:textColor="#1B5E20"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtVillage"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:text="--"
                         android:textColor="@android:color/black"
                         android:textIsSelectable="true"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
                 <!-- Category -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="Category"
                         android:textColor="#1B5E20"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtCategory"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:text="--"
                         android:textColor="@android:color/black"
                         android:textIsSelectable="true"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
                 <!-- Bank -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="Bank"
                         android:textColor="#1B5E20"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtBank"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:text="--"
                         android:textColor="@android:color/black"
                         android:textIsSelectable="true"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
                 <!-- Branch -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="Branch"
                         android:textColor="#1B5E20"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtBranch"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:text="--"
                         android:textColor="@android:color/black"
                         android:textIsSelectable="true"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
                 <!-- Account Number -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="Account Number"
                         android:textColor="#1B5E20"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtAccountNumber"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:letterSpacing="0.03"
                         android:text="--"
                         android:textColor="@android:color/black"
                         android:textIsSelectable="true"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
                 <!-- IFSC Code -->
@@ -581,30 +586,30 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/edittext_bg"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="IFSC Code"
                         android:textColor="#1B5E20"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtIFSCCode"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:fontFamily="sans-serif-medium"
                         android:letterSpacing="0.03"
                         android:text="--"
                         android:textColor="@android:color/black"
                         android:textIsSelectable="true"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -614,7 +619,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginHorizontal="4dp"
+                android:layout_marginHorizontal="2dp"
                 android:layout_marginTop="10dp"
                 android:maxWidth="600dp"
                 android:orientation="vertical"

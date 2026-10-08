@@ -47,23 +47,23 @@
                 android:orientation="vertical"
                 android:outlineAmbientShadowColor="#1B5E20"
                 android:outlineSpotShadowColor="#1B5E20"
-                android:paddingStart="24dp"
+                android:paddingStart="20dp"
                 android:paddingTop="28dp"
-                android:paddingEnd="24dp"
+                android:paddingEnd="20dp"
                 android:paddingBottom="28dp">
 
                 <!-- Logo badge -->
                 <FrameLayout
-                    android:layout_width="104dp"
-                    android:layout_height="104dp"
+                    android:layout_width="88dp"
+                    android:layout_height="88dp"
                     android:layout_marginBottom="16dp"
                     android:background="@drawable/logo_badge_bg"
-                    android:elevation="6dp">
+                    android:elevation="4dp">
 
                     <ImageView
                         android:id="@+id/imgLogo"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
                         android:contentDescription="Government Logo"
@@ -72,7 +72,7 @@
 
                 </FrameLayout>
 
-                <!-- Title -->
+                <!-- Title (Headline: 22sp, Roboto Medium) -->
                 <TextView
                     android:id="@+id/txtTitle"
                     android:layout_width="wrap_content"
@@ -80,86 +80,92 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/subtitle_chip_bg"
-                    android:fontFamily="sans-serif-black"
+                    android:fontFamily="sans-serif-medium"
                     android:gravity="center"
-                    android:letterSpacing="0.02"
+                    android:letterSpacing="0"
                     android:paddingStart="14dp"
                     android:paddingTop="6dp"
                     android:paddingEnd="14dp"
                     android:paddingBottom="6dp"
-                    android:shadowColor="#33000000"
-                    android:shadowDx="1"
-                    android:shadowDy="2"
-                    android:shadowRadius="3"
+                    android:shadowColor="#26000000"
+                    android:shadowDx="0"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
                     android:text="Sign Into Uparjan"
                     android:textColor="#1B5E20"
-                    android:textSize="24sp"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
 
                 <!-- Decorative divider -->
                 <View
                     style="@style/DetailDivider"
                     android:layout_width="match_parent"
-                    android:layout_height="1.5dp"
+                    android:layout_height="1dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="2dp"
                     android:layout_marginBottom="20dp" />
 
-                <!-- Mobile Number -->
+                <!-- Mobile Number (Body: 16sp) -->
                 <EditText
                     android:id="@+id/editTextPhone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="24dp"
+                    android:layout_marginBottom="22dp"
                     android:background="@drawable/edittext_bg"
-                    android:drawableStart="@android:drawable/ic_menu_call"
+                    android:drawableStart="@drawable/ic_phone_small"
                     android:drawablePadding="12dp"
+                    android:fontFamily="sans-serif"
                     android:gravity="center_vertical"
                     android:hint="Enter Mobile Number"
                     android:inputType="phone"
                     android:maxLength="10"
-                    android:minHeight="54dp"
+                    android:minHeight="52dp"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
                     android:textColor="#000000"
-                    android:textColorHint="#757575" />
+                    android:textColorHint="#757575"
+                    android:textSize="16sp" />
 
-                <!-- Login Button -->
+                <!-- Login Button (Button label: 16sp, Roboto Medium) -->
                 <Button
                     android:id="@+id/btnLogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/login_button_bg"
-                    android:elevation="6dp"
-                    android:minHeight="54dp"
+                    android:elevation="4dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="0.01"
+                    android:minHeight="52dp"
                     android:text="Login"
                     android:textAllCaps="false"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
 
             </LinearLayout>
 
-            <!-- New Farmer Register -->
+            <!-- New Farmer Register (Body small: 14sp, 48dp touch target) -->
             <TextView
                 android:id="@+id/txtRegister"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/subtitle_chip_bg"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
+                android:fontFamily="sans-serif-medium"
                 android:gravity="center"
+                android:minHeight="44dp"
                 android:paddingStart="14dp"
                 android:paddingTop="6dp"
                 android:paddingEnd="14dp"
                 android:paddingBottom="6dp"
-                android:shadowColor="#80000000"
-                android:shadowDx="1"
-                android:shadowDy="2"
-                android:shadowRadius="3"
+                android:shadowColor="#40000000"
+                android:shadowDx="0"
+                android:shadowDy="1"
+                android:shadowRadius="2"
                 android:text="New Farmer ? Click here to Register ..."
                 android:textColor="#1B5E20"
                 android:textSize="14sp"

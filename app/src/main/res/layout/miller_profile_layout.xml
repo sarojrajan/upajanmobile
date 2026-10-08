@@ -40,29 +40,29 @@
                 android:orientation="vertical"
                 android:outlineAmbientShadowColor="#1B5E20"
                 android:outlineSpotShadowColor="#1B5E20"
-                android:paddingStart="18dp"
-                android:paddingTop="22dp"
-                android:paddingEnd="18dp"
-                android:paddingBottom="22dp">
+                android:paddingStart="16dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="20dp">
 
-                <!-- Heading -->
+                <!-- Heading (Headline: 22sp, Roboto Medium) -->
                 <TextView
                     android:id="@+id/txtProfileHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-black"
+                    android:fontFamily="sans-serif-medium"
                     android:gravity="center"
-                    android:letterSpacing="0.02"
-                    android:shadowColor="#33000000"
-                    android:shadowDx="1"
-                    android:shadowDy="2"
-                    android:shadowRadius="3"
+                    android:letterSpacing="0"
+                    android:shadowColor="#26000000"
+                    android:shadowDx="0"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
                     android:text="Miller Profile"
                     android:textColor="#1B5E20"
-                    android:textSize="24sp"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
 
-                <!-- Subtitle -->
+                <!-- Subtitle (Label: 12sp, Roboto Medium) -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -70,55 +70,59 @@
                     android:layout_marginTop="2dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/subtitle_chip_bg"
+                    android:fontFamily="sans-serif-medium"
                     android:gravity="center"
-                    android:paddingStart="14dp"
+                    android:letterSpacing="0.02"
+                    android:paddingStart="12dp"
                     android:paddingTop="6dp"
-                    android:paddingEnd="14dp"
+                    android:paddingEnd="12dp"
                     android:paddingBottom="6dp"
                     android:text="Registered Miller information"
                     android:textColor="#66BB6A"
-                    android:textSize="11sp"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <!-- Divider -->
                 <View
                     style="@style/DetailDivider"
                     android:layout_width="match_parent"
-                    android:layout_height="1.5dp"
+                    android:layout_height="1dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="8dp"
-                    android:layout_marginBottom="15dp" />
+                    android:layout_marginBottom="14dp" />
 
                 <!-- ================= MILLER ID ================= -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:elevation="2dp"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
+                    <!-- Field label: 12sp, Roboto Medium -->
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="Miller ID"
                         android:textColor="@color/black"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
+                    <!-- Field value: 16sp -->
                     <TextView
                         android:id="@+id/txtMillerId"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:text="--"
                         android:textColor="@android:color/black"
                         android:textIsSelectable="true"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -126,31 +130,31 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:elevation="2dp"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="Miller Name"
                         android:textColor="@color/black"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtMillerName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:text="--"
                         android:textColor="@android:color/black"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -158,31 +162,31 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:elevation="2dp"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="District"
                         android:textColor="@color/black"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtDistrict"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:text="--"
                         android:textColor="@android:color/black"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -190,31 +194,31 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:elevation="2dp"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="Email ID"
                         android:textColor="@color/black"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtEmailId"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:text="--"
                         android:textColor="@android:color/black"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -222,31 +226,31 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:elevation="2dp"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="Mobile No."
                         android:textColor="@color/black"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtMobileNumber"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:text="--"
                         android:textColor="@android:color/black"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -254,31 +258,31 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:elevation="2dp"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="TIN No."
                         android:textColor="@color/black"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtTinNumber"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:text="--"
                         android:textColor="@android:color/black"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -286,32 +290,32 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:elevation="2dp"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="PAN No."
                         android:textColor="@color/black"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtPan"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:fontFamily="sans-serif-medium"
                         android:text="--"
                         android:textColor="@android:color/black"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -319,31 +323,31 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:elevation="2dp"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="License No."
                         android:textColor="@color/black"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtLicenseNumber"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:text="--"
                         android:textColor="@android:color/black"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -351,31 +355,31 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:elevation="2dp"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="Bank"
                         android:textColor="@color/black"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtBank"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:text="--"
                         android:textColor="@android:color/black"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -383,31 +387,31 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:elevation="2dp"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="Branch"
                         android:textColor="@color/black"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtBranch"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:text="--"
                         android:textColor="@android:color/black"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -415,32 +419,32 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:elevation="2dp"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="Account No."
                         android:textColor="@color/black"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtAccountNumber"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:text="--"
                         android:textColor="@android:color/black"
                         android:textIsSelectable="true"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -448,32 +452,32 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:elevation="2dp"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="IFSC Code"
                         android:textColor="@color/black"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtIfscCode"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:fontFamily="sans-serif-medium"
                         android:text="--"
                         android:textColor="@android:color/black"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -481,31 +485,31 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edittext_bg"
                     android:elevation="2dp"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="Miller Head Name"
                         android:textColor="@color/black"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtMillerHeadName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:text="--"
                         android:textColor="@android:color/black"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -516,28 +520,28 @@
                     android:background="@drawable/edittext_bg"
                     android:elevation="2dp"
                     android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:text="Milling Capacity"
                         android:textColor="@color/black"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtMillingCapacity"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:fontFamily="sans-serif"
                         android:text="--"
                         android:textColor="@android:color/black"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
