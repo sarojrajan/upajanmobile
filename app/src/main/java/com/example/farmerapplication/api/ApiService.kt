@@ -50,6 +50,7 @@ import com.example.farmerapplication.models.SendFarmerSmsRequest
 import com.example.farmerapplication.models.SendFarmerSmsResponse
 import com.example.farmerapplication.models.DSOLoginRequest
 import com.example.farmerapplication.models.DSOLoginResponse
+import com.example.farmerapplication.models.PaddyCapacityResponse
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -262,4 +263,11 @@ interface ApiService {
     @Headers("Accept: application/json", "X-Tunnel-Skip-Anti-Phishing-Page: true")
     @POST("api/Auth/DSO-DMSFCLogin")
     fun dmsfcLogin(@Body request: DSOLoginRequest): Call<DSOLoginResponse>
+
+    /** Fetch paddy capacity details for an MSP centre (PACS). */
+    @Headers("Accept: application/json", "X-Tunnel-Skip-Anti-Phishing-Page: true")
+    @GET("api/MSPCenter/paddy-capacity")
+    fun getPaddyCapacity(@Query("pacsId") pacsId: String): Call<PaddyCapacityResponse>
+
+
 }

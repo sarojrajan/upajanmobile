@@ -23,10 +23,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingStart="12dp"
-            android:paddingTop="16dp"
-            android:paddingEnd="12dp"
-            android:paddingBottom="16dp">
+            android:paddingStart="10dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="14dp">
 
             <!-- ==================== WELCOME CARD ==================== -->
 
@@ -34,29 +34,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginStart="2dp"
-                android:layout_marginEnd="2dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="8dp"
                 android:background="@drawable/login_card_bg"
-                android:elevation="12dp"
+                android:elevation="10dp"
                 android:outlineAmbientShadowColor="#1B5E20"
                 android:outlineSpotShadowColor="#1B5E20"
                 android:gravity="center_vertical"
                 android:maxWidth="600dp"
                 android:orientation="horizontal"
-                android:paddingStart="16dp"
-                android:paddingTop="14dp"
-                android:paddingEnd="14dp"
-                android:paddingBottom="14dp">
+                android:paddingStart="12dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="12dp">
 
-                <!-- Profile -->
+                <!-- Profile Icon (48dp touch target, 28dp icon) -->
                 <ImageView
                     android:id="@+id/btnProfile"
-                    android:layout_width="38dp"
-                    android:layout_height="38dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
                     android:clickable="true"
                     android:contentDescription="MSP Profile"
                     android:focusable="true"
+                    android:padding="5dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/icon_profile"
                     android:tint="#1B5E20" />
@@ -69,23 +71,25 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="8dp"
                     android:layout_weight="1"
+                    android:ellipsize="end"
                     android:fontFamily="sans-serif-medium"
                     android:gravity="start|center_vertical"
                     android:maxLines="2"
-                    android:ellipsize="end"
                     android:text="MSP User Name"
                     android:textColor="#1B5E20"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
                     android:textStyle="bold" />
 
-                <!-- Logout -->
+                <!-- Logout Icon (48dp touch target, 28dp icon) -->
                 <ImageView
                     android:id="@+id/btnLogout"
-                    android:layout_width="38dp"
-                    android:layout_height="38dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
                     android:clickable="true"
                     android:contentDescription="Logout"
                     android:focusable="true"
+                    android:padding="5dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_logout"
                     android:tint="#D32F2F" />
@@ -99,19 +103,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginStart="2dp"
-                android:layout_marginEnd="2dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
                 android:background="@drawable/login_card_bg"
-                android:elevation="12dp"
+                android:elevation="10dp"
                 android:outlineAmbientShadowColor="#1B5E20"
                 android:outlineSpotShadowColor="#1B5E20"
                 android:gravity="center_horizontal"
                 android:maxWidth="600dp"
                 android:orientation="vertical"
-                android:paddingStart="16dp"
-                android:paddingTop="22dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="22dp">
+                android:paddingStart="12dp"
+                android:paddingTop="18dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="18dp">
 
                 <!-- Dashboard Heading -->
                 <TextView
@@ -119,31 +123,32 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="4dp"
+                    android:layout_marginBottom="2dp"
                     android:background="@drawable/subtitle_chip_bg"
-                    android:fontFamily="sans-serif-black"
+                    android:fontFamily="sans-serif-medium"
                     android:gravity="center"
-                    android:letterSpacing="0.02"
-                    android:paddingStart="14dp"
-                    android:paddingTop="6dp"
-                    android:paddingEnd="14dp"
-                    android:paddingBottom="6dp"
+                    android:letterSpacing="0.01"
+                    android:paddingStart="13dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="13dp"
+                    android:paddingBottom="5dp"
                     android:shadowColor="#33000000"
                     android:shadowDx="1"
-                    android:shadowDy="2"
-                    android:shadowRadius="3"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
                     android:text="MSP's Dashboard"
                     android:textColor="#1B5E20"
-                    android:textSize="24sp"
+                    android:textSize="21sp"
                     android:textStyle="bold" />
 
                 <!-- Divider -->
                 <View
+                    style="@style/DetailDivider"
                     android:layout_width="match_parent"
-                    android:layout_height="3dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="22dp"
-                    android:background="#66BB6A" />
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="16dp" />
 
 
                 <!-- ==================== ROW 1 ==================== -->
@@ -159,24 +164,22 @@
                         android:id="@+id/btnViewProfile"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
                         android:layout_weight="1"
-                        android:layout_marginEnd="5dp"
                         android:background="@drawable/login_button_bg"
                         android:clickable="true"
-                        android:elevation="8dp"
-                        android:outlineAmbientShadowColor="#1B5E20"
-                        android:outlineSpotShadowColor="#1B5E20"
+                        android:elevation="6dp"
                         android:focusable="true"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:gravity="center"
-                        android:minHeight="135dp"
+                        android:minHeight="120dp"
                         android:orientation="vertical"
-                        android:padding="10dp">
+                        android:padding="9dp">
 
                         <ImageView
                             android:id="@+id/imgViewProfile"
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
                             android:adjustViewBounds="true"
                             android:contentDescription="View Profile"
                             android:scaleType="fitCenter"
@@ -185,15 +188,14 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="8dp"
                             android:fontFamily="sans-serif-medium"
                             android:gravity="center"
-                            android:letterSpacing="0.02"
+                            android:letterSpacing="0.01"
                             android:maxLines="2"
                             android:text="View Profile"
                             android:textColor="#FFFFFF"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textSize="14sp" />
 
                     </LinearLayout>
 
@@ -203,42 +205,39 @@
                         android:id="@+id/btnMonitorDetails"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
                         android:layout_weight="1"
-                        android:layout_marginStart="5dp"
                         android:background="@drawable/login_button_bg"
                         android:clickable="true"
-                        android:elevation="8dp"
-                        android:outlineAmbientShadowColor="#1B5E20"
-                        android:outlineSpotShadowColor="#1B5E20"
+                        android:elevation="6dp"
                         android:focusable="true"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:gravity="center"
-                        android:minHeight="135dp"
+                        android:minHeight="120dp"
                         android:orientation="vertical"
-                        android:padding="10dp">
+                        android:padding="9dp">
 
                         <ImageView
                             android:id="@+id/imgMonitorDetails"
-                            android:layout_width="72dp"
-                            android:layout_height="72dp"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
                             android:adjustViewBounds="true"
                             android:contentDescription="Monitor Details"
-                            android:padding="5dp"
+                            android:padding="4dp"
                             android:scaleType="fitCenter"
                             android:src="@drawable/img_monitor_details" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
+                            android:layout_marginTop="6dp"
                             android:fontFamily="sans-serif-medium"
                             android:gravity="center"
-                            android:letterSpacing="0.02"
+                            android:letterSpacing="0.01"
                             android:maxLines="2"
                             android:text="Monitor Details"
                             android:textColor="#FFFFFF"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textSize="14sp" />
 
                     </LinearLayout>
 
@@ -248,7 +247,7 @@
                 <!-- Row Spacing -->
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="12dp" />
+                    android:layout_height="10dp" />
 
 
                 <!-- ==================== ROW 2 ==================== -->
@@ -264,85 +263,192 @@
                         android:id="@+id/btnCurrentSlotBook"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
                         android:layout_weight="1"
-                        android:layout_marginEnd="5dp"
                         android:background="@drawable/login_button_bg"
                         android:clickable="true"
-                        android:elevation="8dp"
-                        android:outlineAmbientShadowColor="#1B5E20"
-                        android:outlineSpotShadowColor="#1B5E20"
+                        android:elevation="6dp"
                         android:focusable="true"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:gravity="center"
-                        android:minHeight="135dp"
+                        android:minHeight="120dp"
                         android:orientation="vertical"
-                        android:padding="10dp">
+                        android:padding="9dp">
 
                         <ImageView
                             android:id="@+id/imgCurrentSlotBook"
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
                             android:adjustViewBounds="true"
                             android:contentDescription="Book Current Slot"
-                            android:padding="5dp"
+                            android:padding="4dp"
                             android:scaleType="fitCenter"
                             android:src="@drawable/img_book_slot" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="8dp"
                             android:fontFamily="sans-serif-medium"
                             android:gravity="center"
-                            android:letterSpacing="0.02"
+                            android:letterSpacing="0.01"
                             android:maxLines="2"
                             android:text="Book Current Slot"
                             android:textColor="#FFFFFF"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textSize="14sp" />
+
                     </LinearLayout>
+
 
                     <!-- Reports -->
                     <LinearLayout
                         android:id="@+id/btnMSPReport"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
                         android:layout_weight="1"
-                        android:layout_marginStart="5dp"
                         android:background="@drawable/login_button_bg"
                         android:clickable="true"
-                        android:elevation="8dp"
-                        android:outlineAmbientShadowColor="#1B5E20"
-                        android:outlineSpotShadowColor="#1B5E20"
+                        android:elevation="6dp"
                         android:focusable="true"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:gravity="center"
-                        android:minHeight="135dp"
+                        android:minHeight="120dp"
                         android:orientation="vertical"
-                        android:padding="10dp">
+                        android:padding="9dp">
 
                         <ImageView
                             android:id="@+id/imgMSPReport"
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
                             android:adjustViewBounds="true"
                             android:contentDescription="Reports"
-                            android:padding="5dp"
+                            android:padding="4dp"
                             android:scaleType="fitCenter"
                             android:src="@drawable/img_report" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="8dp"
                             android:fontFamily="sans-serif-medium"
                             android:gravity="center"
-                            android:letterSpacing="0.02"
+                            android:letterSpacing="0.01"
                             android:maxLines="2"
                             android:text="Reports"
                             android:textColor="#FFFFFF"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!-- ==================== MSP CAPACITY DETAILS ==================== -->
+
+                <!-- Spacing after Row 2 -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="14dp" />
+
+                <!-- MSP Capacity Group -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_section_group"
+                    android:orientation="vertical"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp">
+
+                    <!-- MSP Capacity -->
+                    <LinearLayout style="@style/DetailRow">
+
+                        <TextView
+                            style="@style/DetailLabel"
+                            android:text="MSP Capacity" />
+
+                        <TextView
+                            android:id="@+id/txtMspCapacity"
+                            style="@style/DetailValue"
+                            android:text="0 Qntls" />
+
+                    </LinearLayout>
+
+                    <View
+                        style="@style/DetailDivider"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp" />
+
+                    <!-- Total Paddy Procured -->
+                    <LinearLayout style="@style/DetailRow">
+
+                        <TextView
+                            style="@style/DetailLabel"
+                            android:text="Total Paddy Procured" />
+
+                        <TextView
+                            android:id="@+id/txtTotalPaddyProcured"
+                            style="@style/DetailValue"
+                            android:text="0 Qntls" />
+
+                    </LinearLayout>
+
+                    <View
+                        style="@style/DetailDivider"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp" />
+
+                    <!-- Total Paddy Sent to Miller -->
+                    <LinearLayout style="@style/DetailRow">
+
+                        <TextView
+                            style="@style/DetailLabel"
+                            android:text="Total Paddy sent to Miller" />
+
+                        <TextView
+                            android:id="@+id/txtTotalPaddySentMiller"
+                            style="@style/DetailValue"
+                            android:text="0 Qntls" />
+
+                    </LinearLayout>
+
+                    <View
+                        style="@style/DetailDivider"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp" />
+
+                    <!-- Total Paddy Sent to Warehouse -->
+                    <LinearLayout style="@style/DetailRow">
+
+                        <TextView
+                            style="@style/DetailLabel"
+                            android:text="Total Paddy sent to Warehouse" />
+
+                        <TextView
+                            android:id="@+id/txtTotalPaddySentWarehouse"
+                            style="@style/DetailValue"
+                            android:text="0 Qntls" />
+
+                    </LinearLayout>
+
+                    <View
+                        style="@style/DetailDivider"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp" />
+
+                    <!-- Remaining Paddy -->
+                    <LinearLayout style="@style/DetailRow">
+
+                        <TextView
+                            style="@style/DetailLabel"
+                            android:text="Remaining Paddy" />
+
+                        <TextView
+                            android:id="@+id/txtRemainingPaddy"
+                            style="@style/DetailValue"
+                            android:text="0 Qntls" />
 
                     </LinearLayout>
 
@@ -355,3 +461,4 @@
     </ScrollView>
 
 </FrameLayout>
+

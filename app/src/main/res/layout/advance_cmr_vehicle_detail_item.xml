@@ -3,25 +3,26 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"
-    android:layout_marginBottom="14dp"
+    android:layout_marginBottom="12dp"
     android:background="@drawable/prefilled_section_bg"
-    android:elevation="4dp"
+    android:elevation="2dp"
     android:outlineAmbientShadowColor="#1B5E20"
     android:outlineSpotShadowColor="#1B5E20"
     android:maxWidth="600dp"
     android:orientation="vertical"
-    android:paddingStart="16dp"
-    android:paddingTop="16dp"
-    android:paddingEnd="16dp"
-    android:paddingBottom="16dp">
+    android:paddingStart="12dp"
+    android:paddingTop="12dp"
+    android:paddingEnd="12dp"
+    android:paddingBottom="14dp">
 
     <!-- Vehicle Header -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:minHeight="44dp">
+        android:layout_marginBottom="8dp"
+        android:minHeight="48dp">
 
+        <!-- Title (Subheading: 15sp, Roboto Medium) -->
         <TextView
             android:id="@+id/txtVehicleNumberHeading"
             android:layout_width="wrap_content"
@@ -31,25 +32,27 @@
             android:background="@drawable/subtitle_chip_bg"
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
-            android:paddingStart="14dp"
+            android:letterSpacing="0.01"
+            android:paddingStart="12dp"
             android:paddingTop="6dp"
-            android:paddingEnd="14dp"
+            android:paddingEnd="12dp"
             android:paddingBottom="6dp"
             android:text="Vehicle Detail 1"
             android:textColor="#1B5E20"
-            android:textSize="16sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
-        <!-- Delete -->
+        <!-- Delete (48dp touch target, 24dp icon) -->
         <ImageButton
             android:id="@+id/btnDeleteVehicle"
-            android:layout_width="44dp"
-            android:layout_height="44dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:background="?android:attr/selectableItemBackgroundBorderless"
             android:contentDescription="Delete vehicle"
-            android:padding="8dp"
+            android:padding="12dp"
+            android:scaleType="fitCenter"
             android:src="@android:drawable/ic_menu_close_clear_cancel"
             android:tint="#D32F2F" />
 

@@ -39,52 +39,52 @@
                 android:orientation="vertical"
                 android:outlineAmbientShadowColor="#1B5E20"
                 android:outlineSpotShadowColor="#1B5E20"
-                android:paddingStart="18dp"
-                android:paddingTop="22dp"
-                android:paddingEnd="18dp"
-                android:paddingBottom="22dp">
+                android:paddingStart="16dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="20dp">
 
-                <!-- Main heading -->
+                <!-- Main heading (Headline: 22sp, Roboto Medium) -->
                 <TextView
                     android:id="@+id/txtLandDetailsHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:fontFamily="sans-serif-black"
+                    android:fontFamily="sans-serif-medium"
                     android:gravity="center"
-                    android:letterSpacing="0.02"
-                    android:shadowColor="#33000000"
-                    android:shadowDx="1"
-                    android:shadowDy="2"
-                    android:shadowRadius="3"
+                    android:letterSpacing="0"
+                    android:shadowColor="#26000000"
+                    android:shadowDx="0"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
                     android:text="Enter Land Details"
                     android:textColor="#1B5E20"
-                    android:textSize="24sp"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
 
                 <!-- Decorative divider -->
                 <View
+                    style="@style/DetailDivider"
                     android:layout_width="match_parent"
-                    android:layout_height="3dp"
+                    android:layout_height="1dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="4dp"
-                    android:layout_marginBottom="22dp"
-                    android:background="#66BB6A" />
+                    android:layout_marginBottom="20dp" />
 
                 <!-- Common land information -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="18dp"
+                    android:layout_marginBottom="16dp"
                     android:background="@drawable/login_card_bg"
-                    android:elevation="6dp"
+                    android:elevation="4dp"
                     android:orientation="vertical"
                     android:outlineAmbientShadowColor="#1B5E20"
                     android:outlineSpotShadowColor="#1B5E20"
-                    android:paddingStart="14dp"
-                    android:paddingTop="16dp"
-                    android:paddingEnd="14dp"
-                    android:paddingBottom="16dp">
+                    android:paddingStart="12dp"
+                    android:paddingTop="14dp"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="14dp">
 
                     <!-- Land type -->
                     <TextView
@@ -148,25 +148,28 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:layout_marginBottom="25dp"
+                    android:layout_marginBottom="20dp"
                     android:gravity="center">
 
+                    <!-- Button label: 15sp, Roboto Medium -->
                     <Button
                         android:id="@+id/btnAddLandEntry"
                         android:layout_width="wrap_content"
-                        android:layout_height="52dp"
-                        android:background="@drawable/button_bg"
+                        android:layout_height="48dp"
+                        android:background="@drawable/login_button_bg"
                         android:drawableStart="@android:drawable/ic_input_add"
-                        android:drawablePadding="10dp"
+                        android:drawablePadding="8dp"
                         android:drawableTint="@android:color/white"
+                        android:fontFamily="sans-serif-medium"
+                        android:letterSpacing="0.01"
                         android:minHeight="0dp"
-                        android:paddingStart="20dp"
-                        android:paddingEnd="20dp"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="18dp"
                         android:text="Add More Land"
                         android:textAllCaps="false"
                         android:textColor="@android:color/white"
                         android:textSize="15sp"
-                        android:textStyle="bold" />
+                        android:textStyle="normal" />
 
                 </LinearLayout>
 
@@ -175,50 +178,53 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/login_card_bg"
-                    android:elevation="10dp"
+                    android:elevation="6dp"
                     android:orientation="vertical"
                     android:outlineAmbientShadowColor="#1B5E20"
                     android:outlineSpotShadowColor="#1B5E20"
-                    android:paddingStart="18dp"
-                    android:paddingTop="22dp"
-                    android:paddingEnd="18dp"
-                    android:paddingBottom="22dp">
+                    android:paddingStart="16dp"
+                    android:paddingTop="20dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="20dp">
 
+                    <!-- Section title: 18sp, Roboto Medium -->
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-black"
+                        android:fontFamily="sans-serif-medium"
                         android:gravity="center"
-                        android:letterSpacing="0.01"
-                        android:shadowColor="#33000000"
-                        android:shadowDx="1"
-                        android:shadowDy="2"
-                        android:shadowRadius="3"
+                        android:letterSpacing="0"
+                        android:shadowColor="#26000000"
+                        android:shadowDx="0"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
                         android:text="Upload Land Document"
                         android:textColor="#1B5E20"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
+                    <!-- Notes: 14sp / 12sp, Roboto Medium -->
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-medium"
                         android:gravity="center"
                         android:text="(Land Receipt / Challan)"
                         android:textColor="#E67E22"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:layout_marginBottom="24dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="sans-serif-medium"
                         android:gravity="center"
                         android:text="Only PDF files smaller than 512 KB are allowed"
                         android:textColor="#E67E22"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp" />
+
                     <Button
                         android:id="@+id/btnUploadLandDocument"
                         style="@style/FarmerUploadButton"
@@ -231,13 +237,13 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="5dp"
                         android:text="No document selected"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <ProgressBar
                         android:id="@+id/progressSubmit"
                         style="?android:attr/progressBarStyle"
-                        android:layout_width="42dp"
-                        android:layout_height="42dp"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="12dp"
                         android:layout_marginBottom="8dp"
@@ -245,20 +251,22 @@
 
                 </LinearLayout>
 
-                <!-- Update button -->
+                <!-- Update button (Button label: 16sp, Roboto Medium) -->
                 <Button
                     android:id="@+id/btnUpdate"
                     android:layout_width="match_parent"
-                    android:layout_height="56dp"
+                    android:layout_height="52dp"
                     android:layout_marginTop="20dp"
-                    android:background="@drawable/button_bg"
-                    android:elevation="6dp"
+                    android:background="@drawable/login_button_bg"
+                    android:elevation="4dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="0.01"
                     android:minHeight="0dp"
                     android:text="Submit"
                     android:textAllCaps="false"
                     android:textColor="@android:color/white"
-                    android:textSize="17sp"
-                    android:textStyle="bold" />
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
 
             </LinearLayout>
 

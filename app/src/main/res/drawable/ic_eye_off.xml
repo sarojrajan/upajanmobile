@@ -7,7 +7,7 @@
     <!-- Eye outline -->
     <path
         android:fillColor="@android:color/transparent"
-        android:strokeColor="#1B5E20"
+        android:strokeColor="#1b2334"
         android:strokeWidth="1.8"
         android:strokeLineCap="round"
         android:strokeLineJoin="round"
@@ -16,14 +16,14 @@
     <!-- Eye pupil -->
     <path
         android:fillColor="@android:color/transparent"
-        android:strokeColor="#1B5E20"
+        android:strokeColor="#1b2334"
         android:strokeWidth="1.8"
         android:pathData="M12,9a3,3 0,1 0,0 6a3,3 0,1 0,0 -6" />
 
     <!-- Cross / slash -->
     <path
         android:fillColor="@android:color/transparent"
-        android:strokeColor="#1B5E20"
+        android:strokeColor="#1b2334"
         android:strokeWidth="2"
         android:strokeLineCap="round"
         android:pathData="M4,4L20,20" />

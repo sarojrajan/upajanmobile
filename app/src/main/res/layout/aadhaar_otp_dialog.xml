@@ -91,7 +91,7 @@
             android:layout_height="50dp"
             android:layout_marginStart="7dp"
             android:layout_weight="1"
-            android:background="@drawable/button_bg"
+            android:background="@drawable/login_button_bg"
             android:elevation="6dp"
             android:letterSpacing="0.02"
             android:outlineAmbientShadowColor="#1B5E20"
