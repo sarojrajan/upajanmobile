@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit
 
 object RetrofitClient {
     private const val BASE_URL = "https://180zp95b-7143.inc1.devtunnels.ms/"
-    //private const val BASE_URL = "http://localhost:5212/"
+    //private const val BASE_URL = "http://10.92.32.78/"
 
     private val gson by lazy {
         GsonBuilder().setLenient().create()
