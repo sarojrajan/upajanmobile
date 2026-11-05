@@ -51,6 +51,7 @@ import com.example.farmerapplication.models.SendFarmerSmsResponse
 import com.example.farmerapplication.models.DSOLoginRequest
 import com.example.farmerapplication.models.DSOLoginResponse
 import com.example.farmerapplication.models.PaddyCapacityResponse
+import com.example.farmerapplication.models.AppVersionResponse
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -269,5 +270,8 @@ interface ApiService {
     @GET("api/MSPCenter/paddy-capacity")
     fun getPaddyCapacity(@Query("pacsId") pacsId: String): Call<PaddyCapacityResponse>
 
-
+    /** Fetch the latest allowed app version. */
+    @Headers("Accept: application/json", "X-Tunnel-Skip-Anti-Phishing-Page: true")
+    @GET("api/NecessaryDropDown/GetAPIVersion")
+    fun getApiVersion(): Call<AppVersionResponse>
 }
